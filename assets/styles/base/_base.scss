@@ -1,0 +1,59 @@
+:root {
+  // main colors
+  --color-yellow: ##FFD524;
+  --color-red: #fc1f24;
+  --color-blue: #1771E6;
+  --color-blue-dark: #235EB7;
+  --color-blue-light: #4D9DE0;
+
+  // black palette
+  --color-black: #000000;
+  --color-black-graphite: #242424;
+  
+  // grey palette
+  --color-grey-dark-1: #6D6D6D;
+  --color-grey-dark-2: ##888888;
+  --color-grey-dark-3: #959BA4;
+  --color-grey: #d6d6d6;
+  --color-grey-light: ##ECF1F7;
+
+
+  // white palette
+  --color-white: #ffffff;
+  --color-white-dark-1: hsla(0, 100%, 100%, 0.7);
+  --color-white-dark-2: hsla(0, 100%, 100%, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 62.5%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: 'Avenir Next', -apple-system, Roboto, sans-serif;
+  font-style: normal;
+  color: var(--color-black);
+  font-weight: 300;
+  line-height: 1.6;
+}
