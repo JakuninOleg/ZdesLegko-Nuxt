@@ -1,0 +1,30 @@
+.hero {
+  position: relative;
+  color: #FFFFFF;
+
+  &__container {
+    height: 100%;
+    width: 100%;
+    padding-top: 30rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+
+  &__content {
+    margin: 0 auto;
+    @include width;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    display: grid;
+  }
+
+  &__content-title {
+    padding-right: 6rem;
+    grid-column: 1 / 7;
+  }
+  
+  &__content-description {
+    padding-top: 2rem;
+    grid-column: 1 / 6;
+  }
+}

@@ -1,0 +1,21 @@
+.link {
+  text-decoration: none;
+
+  &--main {
+    color: var(--color-white-dark-2);
+  }
+
+  &--secondary {
+    color: #FFFFFF;
+  }
+}
+
+.heading-1 {
+  font-size: 4.6rem;
+  line-height: 6.3rem;
+}
+
+.heading-2 {
+  font-size: 2rem;
+  line-height: 2.7rem;
+}

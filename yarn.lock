@@ -8726,10 +8726,10 @@ vue@^2.6.10:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
 
-vueperslides@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/vueperslides/-/vueperslides-2.1.0.tgz#79248cd25e465059ae410e595681b64bc7ffe931"
-  integrity sha512-Xjv9bSEmGYtS8PpERe/0KHEOznGG2S+dIQw+ntm4BgDSRMQ4Zpzt87uxTJ5n1frzQZHBLQsgw7v3KipCC4nJpw==
+vueperslides@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/vueperslides/-/vueperslides-2.2.0.tgz#0f196e4868aadfb76824f97049c92b4c464a992f"
+  integrity sha512-7iQcNrjgzQ2lpX6B2pkrHahzxvrPt1/Cjax1y0dhWx3IkHzIyZXDQEVEUNc4W/TOzZ/S54rmS3zQ9sDLKYTZaQ==
 
 vuex@^3.1.1:
   version "3.1.2"

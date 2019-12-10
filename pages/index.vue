@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <Carousel />
+    <Hero />
   </div>
 </template>
 
 <script>
-import Carousel from '~/components/Carousel.vue'
+import Hero from '~/components/Hero.vue'
 
 export default {
   components: {
-    Carousel
+    Hero
   }
 }
 </script>
