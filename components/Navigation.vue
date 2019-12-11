@@ -58,7 +58,7 @@
         </li>
         <li class="navigation__list-item navigation__list-item--secondary">
           <nuxt-link to="/contacts" class="link link--secondary">
-            Беззаологовые займы
+            Беззалоговые займы
           </nuxt-link>
         </li>
         <li class="navigation__list-item navigation__list-item--secondary">

@@ -44,6 +44,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@bazzite/nuxt-optimized-images',
     'nuxt-svg-loader'
   ],
   /*
@@ -60,6 +61,13 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+  optimizedImages: {
+    optimizeImages: true,
+    optimizeImagesInDev: true,
+    webp: {
+      quality: 95
     }
   }
 }

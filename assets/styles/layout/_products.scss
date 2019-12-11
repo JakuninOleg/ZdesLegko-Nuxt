@@ -1,0 +1,15 @@
+.products {
+  padding-top: 9.7rem;
+  width: 100%;
+  padding-left: 15rem;
+  padding-right: 15rem;
+
+  &__content {
+    @include width;
+    margin: 0 auto;
+  }
+
+  &__header {
+  
+  }
+}
