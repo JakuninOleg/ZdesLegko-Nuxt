@@ -125,7 +125,13 @@ export default {
   }
 }
 
+.vueperslides__arrow svg {
+  padding: 0;
+  opacity: 1;
+}
+
 .arrow {
+  padding: 0;
 
   &--left {
     transform: rotate(180deg) translateX(-2px);

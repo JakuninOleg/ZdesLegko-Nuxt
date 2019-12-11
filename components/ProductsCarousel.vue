@@ -8,8 +8,29 @@
     :arrows-outside="false"
     class="no-shadow"
     show-multiple-slides="show-multiple-slides"
+    fixed-height="520px"
   >
-    <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.toString()" />
+    <vueper-slide v-for="(slide, i) in slides" :key="i">
+      <template v-slot:content>
+        <div class="product-card">
+          <template>
+            <picture :style="slide.style">
+              <source :srcSet="require('~/assets/images/' + slide.image + '?webp')" type="image/webp">
+              <source :srcSet="require('~/assets/images/' + slide.image + '?resize')" type="image/png">
+              <img :src="require('~/assets/images/' + slide.image + '?sqip')" loading="lazy" class="product-card__image">
+            </picture>
+          </template>
+          <ul class="product-card__list">
+            <li v-for="(benefit, index) in slide.benefits" :key="index">
+              {{ benefit }}
+            </li>
+          </ul>
+          <button class="btn">
+            Оставить заявку
+          </button>
+        </div>
+      </template>
+    </vueper-slide>
   </vueper-slides>
 </template>
 
@@ -24,7 +45,13 @@ export default {
   },
   data () {
     return {
-      slides: [1, 2, 3, 4, 5, 6],
+      slides: [
+        {
+          image: 'bg-1.png',
+          name: 'Деньги под авто',
+          benefits: ['до 50 000 рублей или до 90% стоимости авто', 'досрочное погашение', 'одобрение за 15 минут']
+        }
+      ],
       firstSlide: true,
       lastSlide: false
     }
