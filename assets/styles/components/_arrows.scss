@@ -1,0 +1,48 @@
+.arrows {
+  display: flex;
+
+  &__button {
+    border: 0.5px solid #a4a4a4;
+    background: none;
+    height: 40px;
+    width: 40px;
+    transition: all 0.32s ease-out;
+
+    &--left {
+      transform: rotate(135deg);
+    }
+
+    &--right {
+      transform: rotate(-45deg);
+    }
+
+    &:first-child {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      border: 0.5px solid var(--color-blue);
+
+      & > .arrows__arrow {
+        border: solid var(--color-blue);
+        border-width: 0 2px 2px 0;
+      }
+    }
+
+    &:active {
+      border: 0.5px solid var(--color-blue-dark);
+
+      & > .arrows__arrow {
+        border: solid var(--color-blue-dark);
+        border-width: 0 2px 2px 0;
+      }
+    }
+  }
+
+  &__arrow {
+    border: solid #c9c9c9;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+}

@@ -1,7 +1,8 @@
 .btn {
   border-radius: 3px;
   border: none;
-  font-size: 1.6rem;
+  background: none;
+  transition: all .3s ease-out;
 
   &:hover {
     cursor: pointer;
@@ -15,8 +16,12 @@
     padding: .5rem 2.3rem;
     background-color: transparent;
     color: var(--color-white-light-1);
-    // border: 0.5px solid var(--color-grey-dark-3);
     border: 0.5px solid var(--color-white-dark-1);
+    font-size: 1.6rem;
+
+    &:hover {
+      border: 0.5px solid var(--color-yellow-dark-2);
+    }
   }
 
   &--yellow {
@@ -25,5 +30,28 @@
     color: var(--color-grey-dark-4);
     font-weight: 500;
     font-size: 2rem;
+
+    &:hover {
+      background-color: var(--color-yellow-dark);
+    }
+    &:active {
+      background-color: var(--color-yellow-dark-2);
+    }
+  }
+
+  &--blue {
+    color: var(--color-blue);
+    background-color: var(--color-grey-light-1);
+    padding: 11px 38px;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    &:hover {
+      background-color: var(--color-grey-light-4);
+    }
+
+    &:active {
+      background-color: var(--color-grey);
+    }
   }
 }

@@ -40,10 +40,13 @@
     align-self: center;
     transition: all .32s ease-out;
 
-    &:hover {
-      transform: scale(1.05);
+    &--1 {
+      transform: translate(-120px, -25px);
     }
-    // align-self: center;
+
+    &--2 {
+      transform: translate(30px, -30px);
+    }
   }
 
   &__content-cta {

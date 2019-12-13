@@ -3,6 +3,8 @@
   width: 100%;
   padding-left: 15rem;
   padding-right: 15rem;
+  overflow: hidden;
+  background: var(--color-white-light-2);
 
   &__content {
     @include width;
@@ -10,6 +12,26 @@
   }
 
   &__header {
-  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3.5rem;
+  }
+
+  &__controls {
+    display: flex;
+  }
+
+  &__controls-item {
+    margin-left: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-black-light);
+    cursor: pointer;
+    transition: all .12s ease-out;
+  }
+
+  &__controls-item--active {
+    color: inherit;
   }
 }

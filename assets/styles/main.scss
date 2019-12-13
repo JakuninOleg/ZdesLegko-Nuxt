@@ -1,17 +1,21 @@
 @import "abstracts/mixins";
 
 @import "base/base";
+@import "base/animations";
 @import "base/fonts";
 @import "base/typography";
 
 @import "layout/products";
+@import "layout/product-calculator";
 @import "layout/navigation";
 @import "layout/hero";
 
-@import "components/arrow";
 @import "components/btn";
+@import "components/arrows";
 @import "components/logo";
 @import "components/product-card";
+@import "components/swiper";
+@import "components/vue-slider";
 
 // @import "layout/documents";
 // @import "layout/footer";

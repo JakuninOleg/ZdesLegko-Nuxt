@@ -23,12 +23,14 @@ export default {
   ** Global CSS
   */
   css: [
+    'swiper/dist/css/swiper.css',
     '@/assets/styles/main.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/swiper.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -45,7 +47,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@bazzite/nuxt-optimized-images',
-    'nuxt-svg-loader'
+    'nuxt-svg-loader',
+    'vue-currency-input/nuxt'
   ],
   /*
   ** Axios module configuration

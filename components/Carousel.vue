@@ -1,5 +1,5 @@
 <template>
-  <vueper-slides :slide-ratio="1/3" :dragging-distance="15" :infinite="false" class="no-shadow" fixed-height="715px">
+  <vueper-slides :slide-ratio="1/3" :dragging-distance="15" :infinite="true" class="no-shadow" fixed-height="715px">
     <template v-slot:arrow-left>
       <Arrow class="arrow arrow--left" />
     </template>
@@ -28,7 +28,7 @@
               </button>
             </div>
             <template>
-              <picture :style="slide.style" class="hero__content-image">
+              <picture :style="slide.style" :class="'hero__content-image--' + (index + 1)" class="hero__content-image">
                 <source :srcSet="require('~/assets/images/' + slide.image + '?webp')" type="image/webp">
                 <source :srcSet="require('~/assets/images/' + slide.image + '?resize')" type="image/png">
                 <img :src="require('~/assets/images/' + slide.image + '?sqip')" loading="lazy">
