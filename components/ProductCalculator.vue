@@ -97,10 +97,12 @@ export default {
     },
     inputSum () {
       this.formattedSum = parseInt(this.formattedSum)
-      if (this.sum > 1000000) {
+      if (this.formattedSum > 1000000) {
         this.formattedSum = 1000000
-      } else if (isNaN(this.sum)) {
-        this.sum = 5000
+      } else if (this.formattedSum < 50000) {
+        this.formattedSum = 50000
+      } else if (isNaN(this.formattedSum)) {
+        this.formattedSum = 50000
       }
       this.sum = this.formattedSum
     },

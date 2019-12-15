@@ -47,8 +47,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@bazzite/nuxt-optimized-images',
-    'nuxt-svg-loader',
-    'vue-currency-input/nuxt'
+    'nuxt-svg-loader'
   ],
   /*
   ** Axios module configuration
