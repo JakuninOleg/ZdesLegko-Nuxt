@@ -42,7 +42,7 @@ export default {
       swiperOption: {
         slidesPerView: 'auto',
         slidesOffsetAfter: 300,
-        spaceBetween: 30,
+        spaceBetween: 20,
         freeMode: true,
         speed: 400
       }

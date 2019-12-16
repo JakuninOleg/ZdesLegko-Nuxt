@@ -94,26 +94,28 @@
               </div>
             </div>
             <div class="product-calculator__circle-chart">
-              <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="275" height="275" xmlns="http://www.w3.org/2000/svg">
+              <svg width="275" height="275" viewBox="0 0 33.83098862 33.83098862" class="circle-chart">
+                <circle cx="16.91549431" cy="16.91549431" r="15.91549430918954" fill="#fff" />
                 <circle
-                  class="circle-chart__background"
-                  stroke="#ffd524"
-                  stroke-width="1.2"
-                  fill="none"
                   cx="16.91549431"
                   cy="16.91549431"
-                  r="15.91549431"
+                  r="15.91549430918954"
+                  fill="transparent"
+                  stroke="#ffd524"
+                  stroke-width="1"
+                  stroke-linecap="round"
                 />
+
                 <circle
                   :stroke-dasharray="percent + ',100'"
                   class="circle-chart__circle"
-                  stroke="#3296D8"
-                  stroke-width="1.2"
-                  stroke-linecap="round"
-                  fill="none"
                   cx="16.91549431"
                   cy="16.91549431"
-                  r="15.91549431"
+                  r="15.91549430918954"
+                  fill="transparent"
+                  stroke="#3296D8"
+                  stroke-width="1"
+                  stroke-linecap="round"
                 />
               </svg>
               <div class="product-calculator__circle-inner">
@@ -171,7 +173,6 @@ export default {
       month: 25,
       sum: 50000,
       formattedSum: '50 000 ₽'
-      // percent: 36
     }
   },
   computed: {

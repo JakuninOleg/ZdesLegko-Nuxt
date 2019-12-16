@@ -25,7 +25,7 @@
                 <picture>
                   <source :srcSet="require('~/assets/images/' + slide.image + '?webp')" type="image/webp">
                   <source :srcSet="require('~/assets/images/' + slide.image + '?resize')" type="image/png">
-                  <img :src="require('~/assets/images/' + slide.image + '?sqip')" loading="lazy" class="recommended-card__image">
+                  <img :src="require('~/assets/images/' + slide.image + '?sqip')" loading="lazy" class="recommended-card__image" :class="'recommended-card__image--' + (index + 1)">
                 </picture>
               </template>
             </div>
