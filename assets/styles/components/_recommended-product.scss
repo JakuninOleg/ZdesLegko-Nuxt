@@ -1,0 +1,48 @@
+.recommended-card {
+  height: 240px;
+  width: 574px;
+  border-radius: 10px;
+  color: white;
+
+  &__content {
+    padding: 3rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__rates {
+    margin-top: 2.5rem;
+    display: flex;
+  }
+
+  &__rates-item {
+    display: grid;
+  }
+
+  &__rate {
+    font-size: 4.5rem;
+    margin-right: 3.5rem;
+  }
+
+  &__desc {
+    display: grid;
+    font-size: 14px;
+  }
+
+  &__info {
+    opacity: 0.5;
+    font-size: 14px;
+    padding-top: 1.5rem;
+  }
+
+  &__image {
+    position: absolute;
+    right: 5rem;
+    bottom: 2rem;
+    width: 40%;
+
+    &--1 {
+      bottom: 8rem;
+    }
+  }
+}

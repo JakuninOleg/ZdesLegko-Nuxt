@@ -2,9 +2,9 @@
   <section class="products">
     <div class="products__content">
       <header class="products__header">
-        <h3 class="heading-3">
+        <h2 class="heading-2">
           Лучшие продукты
-        </h3>
+        </h2>
         <div class="products__controls">
           <button :class="choice == 'Все' ? 'products__controls-item--active' : ''" @click="showAllProducts" class="btn products__controls-item">
             Всем

@@ -18,9 +18,9 @@
               <h1 v-html="slide.title" class="heading-1" />
             </div>
             <div class="hero__content-description">
-              <h2 class="heading-2">
+              <h5 class="heading-5">
                 {{ slide.description }}
-              </h2>
+              </h5>
             </div>
             <div class="hero__content-cta">
               <button class="btn btn--yellow">

@@ -1,0 +1,19 @@
+.recommended-swiper {
+  margin-top: 3rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+
+  &__header-title {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__header-heading {
+    margin-right: 2rem;
+  }
+}

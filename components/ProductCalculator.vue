@@ -4,85 +4,179 @@
       <h3 class="heading-3">
         Подберите свой займ
       </h3>
-      <div class="product-calculator__input-wrapper">
-        <div class="product-calculator__input-container">
-          <input
-            id="credit-sum"
-            ref="currencyInput"
-            v-model="formattedSum"
-            @focus="focusSum"
-            @blur="blurSum"
-            @input="inputSum"
-            min="5000"
-            class="product-calculator__input"
-          >
-          <label for="credit-sum" class="product-calculator__label">Желаемая сумма</label>
-          <span class="product-calculator__slider">
-            <VueSlider
-              v-model="sum"
-              :dotSize="21"
-              :min="50000"
-              :max="1000000"
-              :interval="50000"
-              :width="432"
-              @change="formatSliderValue"
-            >
-              <template v-slot:dot>
-                <span class="vue-slider-dot">
-                  <span class="vue-slider-dot__inside" />
-                </span>
-              </template>
-            </VueSlider>
-          </span>
+
+      <div class="product-calculator__container">
+        <div class="product-calculator__container-input">
+          <div class="product-calculator__input-wrapper">
+            <div class="product-calculator__input-container">
+              <input
+                id="credit-sum"
+                ref="currencyInput"
+                v-model="formattedSum"
+                @focus="focusSum"
+                @blur="blurSum"
+                @input="inputSum"
+                min="5000"
+                class="product-calculator__input"
+              >
+              <label for="credit-sum" class="product-calculator__label">Желаемая сумма</label>
+              <span class="product-calculator__slider">
+                <VueSlider
+                  v-model="sum"
+                  :dotSize="21"
+                  :min="50000"
+                  :max="1000000"
+                  :interval="50000"
+                  :width="432"
+                  @change="formatSliderValue"
+                  tooltip="none"
+                >
+                  <template v-slot:dot>
+                    <span class="vue-slider-dot">
+                      <span class="vue-slider-dot__inside" />
+                    </span>
+                  </template>
+                </VueSlider>
+              </span>
+            </div>
+            <div class="product-calculator__input-tooltips">
+              <span class="product-calculator__input-tooltip">5 000 рублей</span>
+              <span class="product-calculator__input-tooltip">1 000 000 рублей</span>
+            </div>
+          </div>
+
+          <div class="product-calculator__input-wrapper">
+            <div class="product-calculator__input-container">
+              <input v-model.number="month" class="product-calculator__input">
+              <label for="credit-sum" class="product-calculator__label">Срок займа</label>
+              <span class="product-calculator__slider">
+                <VueSlider
+                  id="credit-month"
+                  v-model="month"
+                  :min="1"
+                  :dotSize="21"
+                  :max="36"
+                  :width="432"
+                  tooltip="none"
+                >
+                  <template v-slot:dot>
+                    <span class="vue-slider-dot">
+                      <span class="vue-slider-dot__inside" />
+                    </span>
+                  </template>
+                </VueSlider>
+              </span>
+            </div>
+            <div class="product-calculator__input-tooltips">
+              <span class="product-calculator__input-tooltip">1 месяц</span>
+              <span class="product-calculator__input-tooltip">36 месяцев</span>
+            </div>
+          </div>
+          <div class="product-calculator__legal">
+            Пример расчета условий по займу носит исключительно информационный характер и не является публичной офертой
+          </div>
         </div>
-        <div class="product-calculator__input-tooltips">
-          <span class="product-calculator__input-tooltip">5 000 рублей</span>
-          <span class="product-calculator__input-tooltip">1 000 000 рублей</span>
+
+        <div class="product-calculator__container-result">
+          <div class="product-calculator__circle">
+            <div class="product-calculator__data">
+              <div class="product-calculator__result-title">
+                Процентная ставка
+              </div>
+              <div class="product-calculator__result-number">
+                {{ percent }} %
+              </div>
+              <div class="product-calculator__result-title">
+                Ежемесячный платеж
+              </div>
+              <div class="product-calculator__result-number">
+                {{ percent }} Р
+              </div>
+            </div>
+            <div class="product-calculator__circle-chart">
+              <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="275" height="275" xmlns="http://www.w3.org/2000/svg">
+                <circle
+                  class="circle-chart__background"
+                  stroke="#ffd524"
+                  stroke-width="1.2"
+                  fill="none"
+                  cx="16.91549431"
+                  cy="16.91549431"
+                  r="15.91549431"
+                />
+                <circle
+                  :stroke-dasharray="percent + ',100'"
+                  class="circle-chart__circle"
+                  stroke="#3296D8"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  fill="none"
+                  cx="16.91549431"
+                  cy="16.91549431"
+                  r="15.91549431"
+                />
+              </svg>
+              <div class="product-calculator__circle-inner">
+                <div class="product-calculator__circle-text">
+                  Общая сумма платежей
+                </div>
+                <div class="product-calculator__circle-percent">
+                  {{ percent }}
+                </div>
+                <div class="product-calculator__circle-text">
+                  за {{ percent }} месяцев
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-calculator__legend">
+            <div class="product-calculator__legend-item">
+              <span class="product-calculator__legend-circle product-calculator__legend-circle--sum" />
+              <span class="product-calculator__legend-title">
+                Основная сумма
+              </span>
+              <span class="product-calculator__legend-sum">
+                ₽ {{ percent * 10 }}
+              </span>
+            </div>
+            <div class="product-calculator__legend-item">
+              <span class="product-calculator__legend-circle product-calculator__legend-circle--percent" />
+              <span class="product-calculator__legend-title">
+                Проценты
+              </span>
+              <span class="product-calculator__legend-sum">
+                ₽ {{ percent * 10 }}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="product-calculator__input-wrapper">
-        <div class="product-calculator__input-container">
-          <input v-model.number="month" class="product-calculator__input">
-          <label for="credit-sum" class="product-calculator__label">Срок займа</label>
-          <span class="product-calculator__slider">
-            <VueSlider
-              id="credit-month"
-              v-model="month"
-              :min="1"
-              :dotSize="21"
-              :max="36"
-              :width="432"
-            >
-              <template v-slot:dot>
-                <span class="vue-slider-dot">
-                  <span class="vue-slider-dot__inside" />
-                </span>
-              </template>
-            </VueSlider>
-          </span>
-        </div>
-        <div class="product-calculator__input-tooltips">
-          <span class="product-calculator__input-tooltip">1 месяц</span>
-          <span class="product-calculator__input-tooltip">36 месяцев</span>
-        </div>
-      </div>
+      <RecommendedSwiper />
     </div>
   </section>
 </template>
 
 <script>
 import VueSlider from 'vue-slider-component/dist-css/vue-slider-component.umd.min.js'
+import RecommendedSwiper from '~/components/RecommendedSwiper'
 import 'vue-slider-component/dist-css/vue-slider-component.css'
 
 export default {
   components: {
-    VueSlider
+    VueSlider,
+    RecommendedSwiper
   },
   data () {
     return {
       month: 25,
       sum: 50000,
       formattedSum: '50 000 ₽'
+      // percent: 36
+    }
+  },
+  computed: {
+    percent () {
+      return this.sum * 0.0001
     }
   },
   methods: {
