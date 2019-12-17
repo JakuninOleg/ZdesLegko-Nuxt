@@ -5,23 +5,23 @@
 @import "base/fonts";
 @import "base/typography";
 
+@import "layout/benefits";
 @import "layout/products";
 @import "layout/product-calculator";
 @import "layout/navigation";
+@import "layout/news";
 @import "layout/hero";
+@import "layout/footer";
 
+@import "components/_investment-calculator";
 @import "components/btn";
 @import "components/circle-chart";
 @import "components/arrows";
 @import "components/logo";
+@import "components/news-card";
 @import "components/product-card";
 @import "components/recommended-swiper";
 @import "components/recommended-product";
 @import "components/swiper";
+@import "components/questions-form";
 @import "components/vue-slider";
-
-// @import "layout/documents";
-// @import "layout/footer";
-// @import "layout/main";
-// @import "layout/nav";
-// @import "layout/header";

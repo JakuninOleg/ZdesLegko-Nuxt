@@ -1,0 +1,61 @@
+.questions-form {
+  background: #4a597d;
+  padding: 4rem 8rem;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  border-radius: 10px;
+  width: 1171px;
+  height: 265px;
+  color: white;
+
+  &__content {
+    margin-left: 40rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+    row-gap: 2rem;
+  }
+
+  &__questions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+  }
+
+  &__person {
+    position: absolute;
+    bottom: 0;
+    left: 13rem;
+  }
+
+  &__form {
+    display: grid;
+    grid-column: 1;
+  }
+
+  &__input {
+    border: none;
+    background: none;
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 1.6rem;
+    padding-top: 1.2rem;
+    color: white;
+    font-size: 20px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    grid-column: 2;
+    align-self: center;
+  }
+
+  &__label {
+    opacity: 0.7;
+    font-size: 14px;
+  }
+}

@@ -1,8 +1,6 @@
 .product-calculator {
-  padding-top: 9.7rem;
+  padding: 9.7rem 15rem 4rem 15rem;
   width: 100%;
-  padding-left: 15rem;
-  padding-right: 15rem;
   overflow: hidden;
 
   &__content {
@@ -14,15 +12,27 @@
     display: flex;
     margin-top: 3rem;
     padding-top: 2rem;
+    justify-content: space-between;
   }
 
   &__container-input {
     border-right: 1px solid rgba(grey, 0.1);
     padding: 2.5rem 8rem 2.5rem 0;
+
+    &--investment {
+      border-right: none;
+      padding: 0;
+    }
   }
 
   &__container-result {
     padding-left: 7.2rem;
+
+    &--investment {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding-left: 0;
+    }
   }
 
   &__input-wrapper {
@@ -95,7 +105,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 18px;
     text-align: center;
   }
@@ -137,14 +147,13 @@
     width: 1rem;
     grid-row: 1;
 
-    &--sum{
+    &--sum {
       background: var(--color-yellow);
     }
 
     &--percent {
       background: var(--color-blue);
     }
-
   }
 
   &__legend-title {

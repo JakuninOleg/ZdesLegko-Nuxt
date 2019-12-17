@@ -1,0 +1,12 @@
+.footer {
+  width: 100%;
+  background: #3B4144;
+  margin-top: 10rem;
+
+  &__content {
+    @include width;
+    padding: 19rem 15rem 5rem 15rem;
+    margin: 0 auto;
+    position: relative;
+  }
+}

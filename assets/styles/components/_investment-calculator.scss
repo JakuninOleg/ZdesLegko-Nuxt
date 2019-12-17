@@ -1,0 +1,60 @@
+.investment-calculator {
+  &__result {
+    display: grid;
+    width: 475px;
+    height: 414px;
+    position: relative;
+  }
+
+  &__item {
+    padding: 3rem 0 0 5rem;
+    font-size: 3.6rem;
+    display: grid;
+    grid-template-rows: max-content;
+
+    &--profit {
+      color: white;
+      background: #4a597d;
+      border-radius: 0 0 10px 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item-button {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+    width: 150px;
+  }
+
+  &__item-header {
+    line-height: 49px;
+    font-weight: 600;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    color: #3f3d56;
+
+    &--profit {
+      color: #e0e0e0;
+    }
+  }
+
+  &__label {
+    background: var(--color-yellow);
+    border-radius: 50%;
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    display: flex;
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+}
