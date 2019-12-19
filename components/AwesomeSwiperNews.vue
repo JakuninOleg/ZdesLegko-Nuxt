@@ -1,14 +1,16 @@
 <template>
   <div v-swiper:newsSwiper="swiperOption">
     <div class="swiper-wrapper">
-      <div v-for="(slide, index) in slides" :key="index" class="swiper-slide">
+      <div v-for="(slide, index) in slides" :key="index" class="swiper-slide swiper-slide--product">
         <div class="news-card">
           <template>
-            <picture>
-              <source :srcSet="require('~/assets/images/' + slide.image + '?webp')" type="image/webp">
-              <source :srcSet="require('~/assets/images/' + slide.image + '?resize')" type="image/png">
-              <img :src="require('~/assets/images/' + slide.image + '?sqip')" loading="lazy" class="product-card__image">
-            </picture>
+            <figure>
+              <picture>
+                <source :srcSet="require('~/assets/images/' + slide.image + '?webp')" type="image/webp">
+                <source :srcSet="require('~/assets/images/' + slide.image + '?resize')" type="image/png">
+                <img :src="require('~/assets/images/' + slide.image + '?sqip')" :alt="slide.name" loading="lazy" class="product-card__image lazyload">
+              </picture>
+            </figure>
           </template>
           <div class="news-card__content">
             <span class="news-card__date">

@@ -3,6 +3,7 @@
     <Hero />
     <Products />
     <ProductCalculator />
+    <PersonalAccount />
     <Benefits />
     <InvestmentCalculator />
     <News />
@@ -18,6 +19,7 @@ import Benefits from '~/components/Benefits.vue'
 import InvestmentCalculator from '~/components/InvestmentCalculator.vue'
 import News from '~/components/News.vue'
 import Footer from '~/components/Footer.vue'
+import PersonalAccount from '~/components/PersonalAccount'
 
 export default {
   components: {
@@ -27,7 +29,8 @@ export default {
     Benefits,
     InvestmentCalculator,
     News,
-    Footer
+    Footer,
+    PersonalAccount
   }
 }
 </script>

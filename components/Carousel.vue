@@ -1,17 +1,14 @@
+// import Arrow from '@/assets/icons/arrow.svg'
+
+// export default {
+//   components: {
+//     VueperSlides,
+//     VueperSlide,
+//     Arrow
 <template>
-  <vueper-slides :slide-ratio="1/3" :dragging-distance="15" :infinite="true" class="no-shadow" fixed-height="715px">
-    <template v-slot:arrow-left>
-      <Arrow class="arrow arrow--left" />
-    </template>
-    <template v-slot:arrow-right>
-      <Arrow class="arrow arrow--right" />
-    </template>
-    <vueper-slide
-      v-for="(slide, index) in slides"
-      :key="index"
-      :style="slide.background"
-    >
-      <template v-slot:content>
+  <div v-swiper:mySwiper="swiperOption" class="swiper-container--hero">
+    <div class="swiper-wrapper">
+      <div v-for="(slide, index) in slides" :key="index" :style="slide.background" class="swiper-slide">
         <div class="hero__container">
           <div class="hero__content">
             <div class="hero__content-title">
@@ -28,32 +25,50 @@
               </button>
             </div>
             <template>
-              <picture :style="slide.style" :class="'hero__content-image--' + (index + 1)" class="hero__content-image">
-                <source :srcSet="require('~/assets/images/' + slide.image + '?webp')" type="image/webp">
-                <source :srcSet="require('~/assets/images/' + slide.image + '?resize')" type="image/png">
-                <img :src="require('~/assets/images/' + slide.image + '?sqip')" loading="lazy">
-              </picture>
+              <figure class="hero__content-image">
+                <picture>
+                  <source :srcSet="require('~/assets/images/' + slide.image + '?webp')" type="image/webp">
+                  <source :srcSet="require('~/assets/images/' + slide.image + '?resize')" type="image/png">
+                  <img :src="require('~/assets/images/' + slide.image + '?sqip')" :alt="slide.title" :class="'hero__content-image--' + (index + 1)">
+                </picture>
+              </figure>
             </template>
           </div>
         </div>
-      </template>
-    </vueper-slide>
-  </vueper-slides>
+      </div>
+    </div>
+    <div slot="pagination" class="swiper-pagination" />
+    <div slot="button-prev" class="swiper-button swiper-button--prev">
+      <Arrow class="arrow--left" />
+    </div>
+    <div slot="button-next" class="swiper-button swiper-button--next">
+      <Arrow class="arrow--right" />
+    </div>
+  </div>
 </template>
 
 <script>
-import { VueperSlides, VueperSlide } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
-import Arrow from '@/assets/icons/arrow.svg'
+import Arrow from '~/assets/icons/arrow.svg'
 
 export default {
   components: {
-    VueperSlides,
-    VueperSlide,
     Arrow
   },
   data () {
     return {
+      swiperOption: {
+        slidesPerView: 1,
+        speed: 500,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button--next',
+          prevEl: '.swiper-button--prev'
+        }
+      },
       slides: [
         {
           background:
@@ -94,52 +109,3 @@ export default {
   }
 }
 </script>
-
-<style lang='scss'>
-.vueperslides__bullet {
-  background-color: var(--color-grey-light-2);
-  border: none;
-  box-shadow: none;
-  transition: 0.4s ease-out;
-  width: 8px;
-  height: 8px;
-
-  &--active {
-    background-color: var(--color-white-light-2);
-    width: 47px;
-    height: 8px;
-  }
-}
-
-.vueperslides__arrow {
-  border: 0.5px solid #c4c4c4;
-  height: 40px;
-  width: 40px;
-
-  &--next {
-    right: 5%;
-  }
-
-  &--prev {
-    left: 5%;
-  }
-}
-
-.vueperslides__arrow svg {
-  padding: 0;
-  opacity: 1;
-}
-
-.arrow {
-  padding: 0;
-
-  &--left {
-    transform: rotate(180deg) translateX(-2px);
-  }
-
-  &--right {
-    transform: translateX(-2px);
-  }
-
-}
-</style>

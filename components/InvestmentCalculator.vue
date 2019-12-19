@@ -10,7 +10,7 @@
           <div class="product-calculator__input-wrapper">
             <div class="product-calculator__input-container">
               <input
-                id="credit-sum"
+                id="credit-sum-investment"
                 ref="currencyInput"
                 v-model="formattedSum"
                 @focus="focusSum"
@@ -19,7 +19,7 @@
                 min="5000"
                 class="product-calculator__input"
               >
-              <label for="credit-sum" class="product-calculator__label">Желаемая сумма</label>
+              <label for="credit-sum-investment" class="product-calculator__label">Желаемая сумма</label>
               <span class="product-calculator__slider">
                 <VueSlider
                   v-model="sum"
@@ -47,11 +47,11 @@
 
           <div class="product-calculator__input-wrapper">
             <div class="product-calculator__input-container">
-              <input v-model.number="month" class="product-calculator__input">
-              <label for="credit-sum" class="product-calculator__label">Срок займа</label>
+              <input id="investment-month" v-model.number="month" class="product-calculator__input">
+              <label for="investment-month" class="product-calculator__label">Срок займа</label>
               <span class="product-calculator__slider">
                 <VueSlider
-                  id="credit-month"
+
                   v-model="month"
                   :min="1"
                   :dotSize="21"

@@ -1,7 +1,7 @@
 .link {
   text-decoration: none;
   transition: all .2s ease-out;
-  color: black;
+  color: white;
 
   &--main {
     color: var(--color-white-dark-1);
@@ -22,6 +22,10 @@
     &:hover {
       color: var(--color-blue-light);
     }
+  }
+
+  &--checkbox {
+    color: inherit;
   }
 }
 

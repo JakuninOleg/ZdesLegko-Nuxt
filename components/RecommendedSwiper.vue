@@ -10,10 +10,10 @@
         </nuxt-link>
       </div>
       <div class="arrows products__controls-item">
-        <button @click="prevSlide" class="btn arrows__button">
+        <button @click="prevSlide" class="btn arrows__button" aria-label="Prev Slide">
           <span class="arrows__arrow arrows__button--left" />
         </button>
-        <button @click="nextSlide" class="btn arrows__button">
+        <button @click="nextSlide" class="btn arrows__button" aria-label="Next Slide">
           <span class="arrows__arrow arrows__button--right" />
         </button>
       </div>

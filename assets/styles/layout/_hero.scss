@@ -1,13 +1,13 @@
 .hero {
   position: relative;
   color: #FFFFFF;
+  height: 715px;
+  overflow: hidden;
 
   &__container {
     height: 100%;
     width: 100%;
-    padding-top: 15rem;
-    padding-left: 15rem;
-    padding-right: 15rem;
+    overflow: hidden;
   }
 
   &__content {
@@ -17,6 +17,9 @@
     grid-template-rows: 10rem 130px 100px 100px;
     gap: 20px;
     display: grid;
+    padding: 15rem 15rem 0 15rem;
+    position: relative;
+    height: 570px;
   }
 
   &__content-title {
@@ -34,18 +37,24 @@
   }
 
   &__content-image {
-    grid-column: 7 / -1;
-    grid-row: 2 / -1;
+    position: absolute;
     z-index: 0;
-    align-self: center;
+    right: 5rem;
+    bottom: 0;
     transition: all .32s ease-out;
 
     &--1 {
-      transform: translate(-120px, -25px);
+      width: 85%;
+      transform: translate(240px, -140px);
     }
 
     &--2 {
-      transform: translate(30px, -30px);
+      transform: translate(15px, -55px);
+      width: 90%;
+    }
+
+    &--5 {
+      width: 95%;
     }
   }
 

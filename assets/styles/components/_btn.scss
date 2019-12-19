@@ -55,7 +55,26 @@
     }
   }
 
+  &--white {
+    background: white;
+    padding: 14px 80px;
+    font-size: 2rem;
+    font-weight: 500;
+
+    &:hover {
+      background-color: var(--color-white-light-1);
+    }
+
+    &:active {
+      background-color: var(--color-grey-light-3);
+    }
+  }
+
   &--investment {
     padding: 1.5rem;
+  }
+
+  &--form {
+    padding: 1.5rem 0;
   }
 }

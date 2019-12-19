@@ -1,12 +1,76 @@
 .footer {
   width: 100%;
-  background: #3B4144;
+  background: #3b4144;
   margin-top: 10rem;
+  padding: 5rem 15rem 3rem 15rem;
+  position: relative;
 
   &__content {
     @include width;
-    padding: 19rem 15rem 5rem 15rem;
     margin: 0 auto;
-    position: relative;
+  }
+
+  &__content-list {
+    margin-top: 7.6rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(0, 0%, 35%);
+    padding-bottom: 6rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-hours {
+    display: block;
+    opacity: 0.5;
+    color: white;
+  }
+
+  &__list-tel {
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 500;
+  }
+
+  &__list-item {
+    font-size: 1.8rem;
+
+    &--heading {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 2.8rem;
+    }
+
+    &--simple {
+      margin-bottom: 1.5rem;
+    }
+
+    &--policy {
+      margin-top: 4rem;
+      display: grid;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__legal {
+    color: var(--color-grey-dark-3);
+    font-size: 14px;
+    margin-top: 4rem;
+
+    &--copyright {
+      display: block;
+      margin-bottom: 3rem;
+    }
+
+    &--info {
+      width: 80%;
+      display: block;
+    }
   }
 }

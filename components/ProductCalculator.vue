@@ -47,11 +47,10 @@
 
           <div class="product-calculator__input-wrapper">
             <div class="product-calculator__input-container">
-              <input v-model.number="month" class="product-calculator__input">
-              <label for="credit-sum" class="product-calculator__label">Срок займа</label>
+              <input id="credit-month" v-model.number="month" class="product-calculator__input">
+              <label for="credit-month" class="product-calculator__label">Срок займа</label>
               <span class="product-calculator__slider">
                 <VueSlider
-                  id="credit-month"
                   v-model="month"
                   :min="1"
                   :dotSize="21"

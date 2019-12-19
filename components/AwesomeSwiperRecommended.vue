@@ -22,11 +22,13 @@
                 Заключение договора - 15 минут
               </div>
               <template>
-                <picture>
-                  <source :srcSet="require('~/assets/images/' + slide.image + '?webp')" type="image/webp">
-                  <source :srcSet="require('~/assets/images/' + slide.image + '?resize')" type="image/png">
-                  <img :src="require('~/assets/images/' + slide.image + '?sqip')" :class="'recommended-card__image--' + (index + 1)" loading="lazy" class="recommended-card__image">
-                </picture>
+                <figure>
+                  <picture>
+                    <source :srcSet="require('~/assets/images/' + slide.image + '?webp')" type="image/webp">
+                    <source :srcSet="require('~/assets/images/' + slide.image + '?resize')" type="image/png">
+                    <img :src="require('~/assets/images/' + slide.image + '?sqip')" :class="'recommended-card__image--' + (index + 1)" :alt="slide.name" loading="lazy" class="recommended-card__image lazyload">
+                  </picture>
+                </figure>
               </template>
             </div>
           </div>
