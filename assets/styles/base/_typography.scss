@@ -33,7 +33,16 @@
   font-size: 4.6rem;
   line-height: 6.3rem;
   font-weight: 600;
-  padding-right: 2rem;
+
+  @include respond(phone) {
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  @include respond(small-phone) {
+    font-size: 26px;
+    line-height: 35px;
+  }
 }
 
 .heading-2 {
@@ -56,4 +65,10 @@
   line-height: 2.7rem;
   font-weight: 300;
   width: 36rem;
+
+  @include respond(small-phone) {
+    font-size: 16px;
+    line-height: 19px;
+    width: 25rem;
+  }
 }

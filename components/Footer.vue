@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__content">
       <QuestionsForm />
-      <div class="footer__content-list">
+      <nav class="footer__content-list">
         <ul class="footer__list">
           <li class="footer__list-item footer__list-item--heading">
             <Logo />
@@ -126,7 +126,7 @@
             </nuxt-link>
           </li>
         </ul>
-      </div>
+      </nav>
       <div class="footer__legal">
         <span class="footer__legal--copyright">© 2019 ООО “Стратегия” (торговый бренд “Здесь Легко”) ОГРН 1177746843955 ИНН 7722407831 Услуги оказываются партнерами сервиса «Здесь легко»</span>
         <span class="footer__legal--info">Обращаем ваше внимание, что информация, размещенная на сайте, носит информаионный харакет и не является публичной офертой, определяемой полжениями статьи 437 ГК РФ. Конкретные условия займа будут определеяться отдельно при заключении договора.</span>

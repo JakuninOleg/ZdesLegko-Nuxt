@@ -54,11 +54,7 @@ html {
   -webkit-font-smoothing: antialiased;
 
   @include respond(tab-land) {
-    font-size: 62.5%;
-  }
-
-  @include respond(tab-port) {
-    font-size: 50%;
+    font-size: 60%;
   }
 }
 

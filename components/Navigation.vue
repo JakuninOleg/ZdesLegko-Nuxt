@@ -38,6 +38,10 @@
           Войти
         </button>
       </div>
+      <div class="navigation__icons">
+        <Login class="navigation__icons-icon" />
+        <Menu class="navigation__icons-icon" />
+      </div>
     </div>
     <div class="navigation__content navigation__content--bottom">
       <ul class="navigation__list">
@@ -73,10 +77,16 @@
 
 <script>
 import Logo from '@/assets/icons/logo.svg'
+// import Cross from '@/assets/icons/cross.svg'
+import Login from '@/assets/icons/login.svg'
+import Menu from '@/assets/icons/Menu.svg'
 
 export default {
   components: {
-    Logo
+    Logo,
+    // Cross,
+    Login,
+    Menu
   }
 }
 </script>
