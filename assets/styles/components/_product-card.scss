@@ -2,12 +2,25 @@
   border: 1px solid var(--color-grey-light-3);
   border-radius: 12px;
 
+  @include respond(phone) {
+    width: 230px;
+    height: 420px;
+  }
+
   &__image {
     width: 100%;
   }
 
   &__content {
     padding: 2rem 2.4rem;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      padding: 1.5rem 2rem;
+    }
   }
 
   &__list {
@@ -15,6 +28,11 @@
     font-size: 15px;
     color: var(--color-black-graphite);
     padding: .9rem 0 3.4rem 0;
+
+    @include respond(phone) {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 }
 

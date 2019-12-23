@@ -6,9 +6,20 @@
           <template>
             <figure>
               <picture :style="slide.style">
-                <source :srcSet="require('~/assets/images/' + slide.image + '?webp')" type="image/webp">
-                <source :srcSet="require('~/assets/images/' + slide.image + '?resize')" type="image/png">
-                <img :src="require('~/assets/images/' + slide.image + '?sqip')" :alt="slide.name" loading="lazy" class="product-card__image lazyload">
+                <source
+                  :srcSet="require('~/assets/images/' + slide.image + '?webp')"
+                  type="image/webp"
+                >
+                <source
+                  :srcSet="require('~/assets/images/' + slide.image + '?resize')"
+                  type="image/png"
+                >
+                <img
+                  :src="require('~/assets/images/' + slide.image + '?sqip')"
+                  :alt="slide.name"
+                  loading="lazy"
+                  class="product-card__image lazyload"
+                >
               </picture>
             </figure>
           </template>
@@ -46,7 +57,12 @@ export default {
         slidesOffsetAfter: 300,
         spaceBetween: 20,
         freeMode: true,
-        speed: 400
+        speed: 400,
+        breakpoints: {
+          500: {
+            slidesOffsetAfter: 0
+          }
+        }
       }
     }
   }

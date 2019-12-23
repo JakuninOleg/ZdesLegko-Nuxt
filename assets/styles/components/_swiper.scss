@@ -12,11 +12,17 @@
   &--product {
     width: 40rem;
     height: 60rem;
+
+    @include respond(phone) {
+      width: 230px;
+      height: 420px;
+    }
   }
 
   &--recommended {
     height: 240px;
     width: 57.5rem;
+    
   }
 
   &--hero {
@@ -96,20 +102,22 @@
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
   @include respond(tab-land) {
-    bottom: 65px;
+    bottom: 50px;
     right: -35%;
     width: 100%;
     left: auto;
   }
 
   @include respond(phone) {
-    bottom: 20px;
+    bottom: 12px;
     right: auto;
     width: 100%;
     left: 3rem;
   }
 }
 .swiper-pagination {
+  z-index: 3;
+  
   @include respond(phone) {
     text-align: left;
   }

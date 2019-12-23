@@ -1,9 +1,9 @@
 <template>
   <section class="product-calculator">
     <div class="product-calculator__content">
-      <h3 class="heading-3">
+      <h2 class="heading-2">
         Подберите свой займ
-      </h3>
+      </h2>
 
       <div class="product-calculator__container">
         <div class="product-calculator__container-input">
@@ -27,7 +27,6 @@
                   :min="50000"
                   :max="1000000"
                   :interval="50000"
-                  :width="432"
                   @change="formatSliderValue"
                   tooltip="none"
                 >
@@ -55,8 +54,8 @@
                   :min="1"
                   :dotSize="21"
                   :max="36"
-                  :width="432"
                   tooltip="none"
+                  class="vue-slider-kek"
                 >
                   <template v-slot:dot>
                     <span class="vue-slider-dot">

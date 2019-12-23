@@ -10,10 +10,10 @@
             Всем
           </button>
           <button :class="choice == 'Частные' ? 'products__controls-item--active' : ''" @click="showPrivateProducts" class="btn products__controls-item">
-            Частным клиентам
+            Частным
           </button>
           <button :class="choice == 'Бизнес' ? 'products__controls-item--active' : ''" @click="showBusinessProducts" class="btn products__controls-item">
-            Бизнес клиентам
+            Бизнесу
           </button>
           <div class="arrows products__controls-item">
             <button @click="prevSlide" class="btn arrows__button" aria-label="Prev Slide">
@@ -43,7 +43,7 @@ export default {
         {
           image: 'pc-1.png',
           name: 'Деньги под авто',
-          benefits: ['до 50 000 рублей или до 90% стоимости авто', 'досрочное погашение', 'одобрение за 15 минут'],
+          benefits: ['до 50 000 рублей или 90% стоимости', 'досрочное погашение', 'одобрение за 15 минут'],
           private: true,
           business: true
         },

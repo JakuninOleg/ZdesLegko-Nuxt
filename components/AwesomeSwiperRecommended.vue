@@ -53,7 +53,12 @@ export default {
         slidesOffsetAfter: 300,
         spaceBetween: 20,
         freeMode: true,
-        speed: 400
+        speed: 400,
+        breakpoints: {
+          900: {
+            slidesOffsetAfter: 0
+          }
+        }
       }
     }
   }

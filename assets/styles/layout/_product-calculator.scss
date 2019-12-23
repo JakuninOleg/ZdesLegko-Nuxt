@@ -1,7 +1,13 @@
 .product-calculator {
-  padding: 9.7rem 15rem 4rem 15rem;
+  @include padding;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
   width: 100%;
   overflow: hidden;
+
+  @include respond(tab-land) {
+    padding-top: 5rem;
+  }
 
   &__content {
     @include width;
@@ -13,11 +19,22 @@
     margin-top: 3rem;
     padding-top: 2rem;
     justify-content: space-between;
+
+    @include respond(tab-land) {
+      padding-top: 0;
+      display: grid;
+      justify-content: initial;
+    }
   }
 
   &__container-input {
     border-right: 1px solid rgba(grey, 0.1);
     padding: 2.5rem 8rem 2.5rem 0;
+
+    @include respond(tab-land) {
+      border-right: none;
+      padding: 0;
+    }
 
     &--investment {
       border-right: none;
@@ -27,6 +44,11 @@
 
   &__container-result {
     padding-left: 2rem;
+
+    @include respond(tab-land) {
+      padding-left: 0;
+      margin-top: 2rem;
+    }
 
     &--investment {
       border: 1px solid #e0e0e0;
@@ -38,6 +60,10 @@
   &__input-wrapper {
     width: 48rem;
     margin-bottom: 5rem;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
   }
 
   &__input-container {
@@ -73,10 +99,11 @@
     bottom: 0;
     bottom: -11px;
     left: 24px;
+    width: 90%;
   }
 
   &__input-tooltips {
-    width: 43.2rem;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -94,6 +121,10 @@
 
   &__circle {
     display: flex;
+
+    @include respond(tab-land) {
+      justify-content: space-around;
+    }
   }
 
   &__circle-chart {
@@ -133,12 +164,21 @@
     padding-top: 8rem;
     display: flex;
     justify-content: space-around;
+
+    @include respond(tab-land) {
+      justify-content: flex-start;
+      padding-left: 5rem;
+    }
   }
 
   &__legend-item {
     display: grid;
     align-items: center;
     gap: 1rem;
+
+    @include respond(tab-land) {
+      margin-right: 8rem;
+    }
   }
 
   &__legend-circle {

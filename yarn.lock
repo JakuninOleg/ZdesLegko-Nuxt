@@ -710,12 +710,12 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@bazzite/nuxt-optimized-images@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@bazzite/nuxt-optimized-images/-/nuxt-optimized-images-0.2.2.tgz#dec27b318fe2f8a023bbc783911aff81cb5b4ac3"
-  integrity sha512-NVFffaIoCuoCaLOTH/pFOVyBS+9B+SgFj9IJlt9ht6ljjiEoFOTz26ehmgndxANKdVJbgmOnKm/RnyrunpoEMQ==
+"@bazzite/nuxt-optimized-images@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@bazzite/nuxt-optimized-images/-/nuxt-optimized-images-0.3.0.tgz#556d1e7765b59abb8e75c00fc3c3bf67bddfebd1"
+  integrity sha512-yCUS1Pgsy1u3lGnhHaF1FIoES/UapyTmpRHvYrq0uOefnG4MPQ0Nui+CaBQq0Di6f1DWKETcgnh/Raenm9CwKg==
   dependencies:
-    consola "^2.11.0"
+    consola "^2.11.1"
     imagemin "^7.0.1"
     img-loader "^3.0.1"
     raw-loader "^3.1.0"
@@ -2580,10 +2580,15 @@ connect@^3.7.0:
     parseurl "~1.3.3"
     utils-merge "1.0.1"
 
-consola@^2.10.0, consola@^2.10.1, consola@^2.11.0, consola@^2.3.2, consola@^2.5.6, consola@^2.6.0, consola@^2.9.0:
+consola@^2.10.0, consola@^2.10.1, consola@^2.3.2, consola@^2.5.6, consola@^2.6.0, consola@^2.9.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/consola/-/consola-2.11.0.tgz#9bb35d850d8cecde894ce2eb4d792fa6b90d9013"
   integrity sha512-2bcAqHastlPSCvZ+ur8bgHInGAWvUnysWz3h3xRX+/XZoCY7avolJJnVXOPGoVoyCcg1b231XixonoArmgxaoA==
+
+consola@^2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.11.1.tgz#1df259c0a7aef44c9eb4f448e3a20ba0850a65e7"
+  integrity sha512-zFH/xFAE/KHJiWqwyTEDmdFe34Swc0pqMKJeowTvR3irepx8kKPu8bjaKzRd+RLjLH+0TvFxFBnohbSUQ+hOsw==
 
 console-browserify@^1.1.0:
   version "1.2.0"
