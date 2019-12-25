@@ -112,7 +112,7 @@
 <script>
 import Logo from '@/assets/icons/logo.svg'
 import Login from '@/assets/icons/login.svg'
-import Menu from '@/assets/icons/Menu.svg'
+import Menu from '@/assets/icons/menu.svg'
 import BurgerMenu from '@/components/BurgerMenu'
 
 export default {
