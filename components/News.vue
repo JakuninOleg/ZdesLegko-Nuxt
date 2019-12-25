@@ -4,7 +4,7 @@
       <header class="recommended-swiper__header">
         <div class="recommended-swiper__header-title">
           <h4 class="heading-4 recommended-swiper__header-heading">
-            Новостной журнал
+            Новости
           </h4>
           <nuxt-link to="/blog" class="link link--swiper">
             Все новости

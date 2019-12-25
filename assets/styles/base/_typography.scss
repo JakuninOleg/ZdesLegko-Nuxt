@@ -19,6 +19,10 @@
     color: var(--color-blue-dark);
     font-size: 18px;
 
+    @include respond(phone) {
+      font-size: 14px;
+    }
+
     &:hover {
       color: var(--color-blue-light);
     }
@@ -35,11 +39,6 @@
   font-weight: 600;
 
   @include respond(phone) {
-    font-size: 32px;
-    line-height: 35px;
-  }
-
-  @include respond(small-phone) {
     font-size: 24px;
     line-height: 28px;
   }
@@ -86,7 +85,7 @@
   font-weight: 300;
   width: 36rem;
 
-  @include respond(small-phone) {
+  @include respond(phone) {
     font-size: 16px;
     line-height: 19px;
     width: 25rem;

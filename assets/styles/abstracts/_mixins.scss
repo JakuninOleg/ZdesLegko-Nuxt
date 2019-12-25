@@ -6,6 +6,13 @@
     }
   }
 
+  @if $breakpoint == iphone5 {
+    @media only screen and (max-width: 21.875em) {
+      //580px
+      @content;
+    }
+  }
+
   @if $breakpoint == phone {
     @media only screen and (max-width: 36.25em) {
       //580px
@@ -16,6 +23,13 @@
   @if $breakpoint == tab-port {
     @media only screen and (max-width: 48em) {
       //768px
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm-desktop {
+    @media only screen and (max-width: 68.75em) {
+      //1100px
       @content;
     }
   }
@@ -55,9 +69,14 @@
     padding-right: 10rem;
   }
 
-  @include respond(tab-port) {
+  @include respond(sm-desktop) {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  @include respond(tab-port) {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   @include respond(phone) {

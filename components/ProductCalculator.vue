@@ -39,8 +39,8 @@
               </span>
             </div>
             <div class="product-calculator__input-tooltips">
-              <span class="product-calculator__input-tooltip">5 000 рублей</span>
-              <span class="product-calculator__input-tooltip">1 000 000 рублей</span>
+              <span class="product-calculator__input-tooltip">5 000 <span class="product-calculator__input-tooltip-rub">рублей</span></span>
+              <span class="product-calculator__input-tooltip">1 000 000 <span class="product-calculator__input-tooltip-rub">рублей</span></span>
             </div>
           </div>
 
@@ -70,9 +70,10 @@
               <span class="product-calculator__input-tooltip">36 месяцев</span>
             </div>
           </div>
-          <div class="product-calculator__legal">
-            Пример расчета условий по займу носит исключительно информационный характер и не является публичной офертой
-          </div>
+        </div>
+
+        <div class="product-calculator__legal">
+          Пример расчета условий по займу носит исключительно информационный характер и не является публичной офертой
         </div>
 
         <div class="product-calculator__container-result">
@@ -121,7 +122,7 @@
                   Общая сумма платежей
                 </div>
                 <div class="product-calculator__circle-percent">
-                  {{ percent }}
+                  {{ percent * 1000 }}
                 </div>
                 <div class="product-calculator__circle-text">
                   за {{ percent }} месяцев

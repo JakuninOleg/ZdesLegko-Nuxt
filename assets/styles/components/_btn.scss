@@ -31,7 +31,7 @@
     font-weight: 500;
     font-size: 2rem;
 
-    @include respond(small-phone) {
+    @include respond(phone) {
       padding: 1.2rem 3rem;
       font-size: 1.6rem;
     }
@@ -51,7 +51,7 @@
     font-size: 1.8rem;
     font-weight: 500;
 
-    @include respond(small-phone) {
+    @include respond(phone) {
       padding: 1rem 3rem;
       font-size: 1.6rem;
     }
@@ -82,6 +82,10 @@
 
   &--investment {
     padding: 1.5rem;
+
+    @include respond(tab-port) {
+      width: auto;
+    }
   }
 
   &--form {

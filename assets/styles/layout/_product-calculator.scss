@@ -1,7 +1,7 @@
 .product-calculator {
   @include padding;
   padding-top: 8rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
   width: 100%;
   overflow: hidden;
 
@@ -15,15 +15,18 @@
   }
 
   &__container {
-    display: flex;
+    display: grid;
     margin-top: 3rem;
     padding-top: 2rem;
-    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
 
     @include respond(tab-land) {
-      padding-top: 0;
-      display: grid;
-      justify-content: initial;
+      grid-template-columns: 1fr;
+    }
+
+    @include respond(phone) {
+      padding: 0;
+      margin-top: 2rem;
     }
   }
 
@@ -43,17 +46,30 @@
   }
 
   &__container-result {
-    padding-left: 2rem;
+    justify-self: flex-end;
+    grid-row: 1;
+    grid-column: 2;
 
     @include respond(tab-land) {
-      padding-left: 0;
+      justify-self: normal;
       margin-top: 2rem;
+      grid-row: 2;
+      grid-column: 1;
     }
 
     &--investment {
       border: 1px solid #e0e0e0;
       border-radius: 10px;
       padding-left: 0;
+
+      @include respond(tab-land) {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      @include respond(tab-land) {
+        margin-top: 3rem;
+      }
     }
   }
 
@@ -64,12 +80,20 @@
     @include respond(tab-land) {
       width: 100%;
     }
+
+    @include respond(phone) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__input-container {
     width: 100%;
     height: 8.5rem;
     position: relative;
+
+    @include respond(phone) {
+      height: auto;
+    }
   }
 
   &__input {
@@ -80,6 +104,11 @@
     padding: 0 2rem;
     padding-top: 2.5rem;
     font-size: 22px;
+
+    @include respond(phone) {
+      border: none;
+      padding: 3.5rem 0 2.5rem 0;
+    }
 
     &:focus {
       outline: none;
@@ -92,6 +121,11 @@
     position: absolute;
     top: 11px;
     left: 20px;
+
+    @include respond(phone) {
+      left: 0;
+      top: 0;
+    }
   }
 
   &__slider {
@@ -100,6 +134,11 @@
     bottom: -11px;
     left: 24px;
     width: 90%;
+
+    @include respond(phone) {
+      left: 6px;
+      padding-top: 1rem;
+    }
   }
 
   &__input-tooltips {
@@ -110,14 +149,45 @@
     color: #6d6d6d;
     font-size: 14px;
     padding-top: 1.8rem;
+
+    @include respond(phone) {
+      width: 100%;
+      padding: 2rem 4rem 0 1rem;
+    }
+
+    @include respond(small-phone) {
+      width: 100%;
+      padding: 2rem 2.5rem 0 1rem;
+    }
+  }
+
+  &__input-tooltip-rub {
+    @include respond(small-phone) {
+      display: none;
+    }
   }
 
   &__legal {
     color: #c5c5c5;
     font-size: 14px;
     width: 475px;
-    margin-top: 41px;
+    grid-column: 1;
+    transform: translateY(-45px);
+
+    @include respond(tab-land) {
+      grid-row: 3;
+      transform: none;
+      margin: 0 auto;
+      width: 85%;
+      margin-top: 2rem;
+    }
+
+    @include respond(phone) {
+      padding: 1rem 0;
+    }
   }
+
+  //  circle
 
   &__circle {
     display: flex;
@@ -125,11 +195,21 @@
     @include respond(tab-land) {
       justify-content: space-around;
     }
+
+    @include respond(phone) {
+      display: grid;
+      justify-content: initial;
+    }
   }
 
   &__circle-chart {
     margin-left: 4rem;
     position: relative;
+
+    @include respond(phone) {
+      margin-left: -1rem;
+      justify-self: center;
+    }
   }
 
   &__circle-inner {
@@ -149,16 +229,38 @@
 
   &__data {
     padding-top: 3rem;
+
+    @include respond(phone) {
+      display: grid;
+      column-gap: 1rem;
+      margin-bottom: 2rem;
+      padding-top: 0;
+      justify-items: flex-start;
+    }
   }
 
   &__result-title {
     font-weight: 500;
     font-size: 18px;
+
+    @include respond(phone) {
+      grid-row: 1;
+      font-size: 12px;
+      font-weight: normal;
+      margin-bottom: 1rem;
+    }
   }
 
   &__result-number {
     font-size: 55px;
+
+    @include respond(phone) {
+      font-size: 35px;
+      grid-row: 2;
+    }
   }
+
+  // legend
 
   &__legend {
     padding-top: 8rem;
@@ -169,6 +271,11 @@
       justify-content: flex-start;
       padding-left: 5rem;
     }
+
+    @include respond(phone) {
+      padding-left: 0;
+      padding-top: 3rem;
+    }
   }
 
   &__legend-item {
@@ -178,6 +285,10 @@
 
     @include respond(tab-land) {
       margin-right: 8rem;
+    }
+
+    @include respond(phone) {
+      margin-right: 2rem;
     }
   }
 

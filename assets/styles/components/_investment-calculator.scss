@@ -4,19 +4,71 @@
     width: 475px;
     height: 414px;
     position: relative;
+
+    @include respond(tab-land) {
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
   }
 
   &__item {
     padding: 3rem 0 0 5rem;
     font-size: 3.6rem;
     display: grid;
-    grid-template-rows: max-content;
+    grid-template-rows: min-content;
+
+    @include respond(phone) {
+      padding: 2rem;
+    }
 
     &--profit {
       color: white;
       background: #4a597d;
       border-radius: 0 0 10px 10px;
       grid-template-columns: 1fr 1fr;
+
+      @include respond(tab-land) {
+        grid-column: 1 / -1;
+      }
+
+      @include respond(tab-port) {
+        padding: 2rem 4rem;
+        grid-template-columns: 1fr;
+      }
+
+      @include respond(phone) {
+        padding: 2rem;
+      }
+    }
+
+    &--income {
+      @include respond(tab-land) {
+        margin-top: 5rem;
+      }
+
+      @include respond(tab-port) {
+        margin-top: 0;
+      }
+    }
+
+    &--income-total {
+      @include respond(tab-land) {
+        margin-top: 5rem;
+        grid-row: 1;
+        grid-column: 2;
+      }
+
+      @include respond(tab-port) {
+        margin-top: 0;
+        grid-row: 2;
+        grid-column: 1 / -1;
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -26,19 +78,54 @@
     align-self: center;
     justify-self: center;
     width: 150px;
+
+    @include respond(tab-port) {
+      grid-row: 3;
+      grid-column: 1 / -1;
+      justify-self: initial;
+      margin-top: 2rem;
+    }
   }
 
   &__item-header {
     line-height: 49px;
     font-weight: 600;
+
+    @include respond(tab-land) {
+      font-size: 36px;
+    }
+
+    @include respond(phone) {
+      font-size: 30px;
+    }
   }
 
   &__item-text {
     font-size: 18px;
     color: #3f3d56;
 
+    @include respond(tab-land) {
+      padding: 1rem 2rem 0 0;
+      font-size: 16px;
+    }
+
+    @include respond(phone) {
+      font-size: 14px;
+      padding: 0;
+    }
+
     &--profit {
       color: #e0e0e0;
+
+      @include respond(tab-land) {
+        grid-row: 2;
+        grid-column: 1 / -1;
+        padding-right: 25rem;
+      }
+
+      @include respond(tab-port) {
+        padding-right: 0;
+      }
     }
   }
 
@@ -56,5 +143,11 @@
     height: 100px;
     justify-content: center;
     align-items: center;
+
+    @include respond(phone) {
+      font-size: 18px;
+      width: 65px;
+      height: 65px;
+    }
   }
 }

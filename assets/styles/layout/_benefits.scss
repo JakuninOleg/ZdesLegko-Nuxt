@@ -1,7 +1,12 @@
 .benefits {
-  padding: 8rem 15rem 6rem 15rem;
+  @include padding;
+  padding-top: 8rem;
   width: 100%;
   // background: var(--color-white-light-2);
+
+  @include respond(tab-land) {
+    padding-top: 5rem;
+  }
 
   &__content {
     @include width;
@@ -11,11 +16,24 @@
   &__benefit-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__benefit-item {
     display: grid;
     width: 32rem;
+    margin-bottom: 3rem;
+
+    @include respond(tab-land) {
+      margin-right: 5rem;
+      justify-self: center;
+      width: 90%;
+    }
+
+    @include respond(phone) {
+      margin-right: 0;
+      width: 100%;
+    }
   }
 
   &__benefit-heading {

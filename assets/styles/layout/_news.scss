@@ -1,7 +1,13 @@
 .news {
+  @include padding;
   width: 100%;
-  padding: 8rem 15rem 3rem 15rem;
+  padding-top: 8rem;
+  padding-bottom: 15rem;
   overflow: hidden;
+
+  @include respond(tab-land) {
+    padding-top: 3rem;
+  }
 
   &__content {
     @include width;

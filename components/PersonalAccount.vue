@@ -5,7 +5,7 @@
         <picture>
           <source :srcSet="require('~/assets/images/laptop.png?webp')" type="image/webp">
           <source :srcSet="require('~/assets/images/laptop.png?resize')" type="image/png">
-          <img :src="require('~/assets/images/laptop.png?sqip')" loading="lazy" alt="Ask me a question">
+          <img :src="require('~/assets/images/laptop.png?sqip')" loading="lazy" alt="Ask me a question" class="personal-account__image">
         </picture>
       </figure>
       <div class="personal-account__container">

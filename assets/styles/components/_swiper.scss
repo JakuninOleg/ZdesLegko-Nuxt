@@ -9,25 +9,33 @@
 }
 
 .swiper-slide {
+  height: 100%;
   &--product {
     width: 40rem;
-    height: 60rem;
 
     @include respond(phone) {
       width: 230px;
-      height: 420px;
     }
   }
 
   &--recommended {
-    height: 240px;
     width: 57.5rem;
-    
+
+    @include respond(phone) {
+      width: 230px;
+    }
+  }
+
+  &--news {
+    width: 377px;
+
+    @include respond(phone) {
+      width: 230px;
+    }
   }
 
   &--hero {
     width: 100%;
-    height: 715px;
   }
 }
 
@@ -117,7 +125,7 @@
 }
 .swiper-pagination {
   z-index: 3;
-  
+
   @include respond(phone) {
     text-align: left;
   }

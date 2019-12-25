@@ -1,9 +1,9 @@
 <template>
   <section class="product-calculator">
     <div class="product-calculator__content">
-      <h3 class="heading-3">
+      <h2 class="heading-2">
         Приумножайте накопления
-      </h3>
+      </h2>
 
       <div class="product-calculator__container">
         <div class="product-calculator__container-input product-calculator__container-input--investment">
@@ -27,7 +27,6 @@
                   :min="50000"
                   :max="1000000"
                   :interval="50000"
-                  :width="432"
                   @change="formatSliderValue"
                   tooltip="none"
                 >
@@ -56,7 +55,6 @@
                   :min="1"
                   :dotSize="21"
                   :max="36"
-                  :width="432"
                   tooltip="none"
                 >
                   <template v-slot:dot>
@@ -72,11 +70,10 @@
               <span class="product-calculator__input-tooltip">36 месяцев</span>
             </div>
           </div>
-          <div class="product-calculator__legal">
-            Пример расчета условий инвестирования носит исключительно информационный характер и не является публичной офертой
-          </div>
         </div>
-
+        <div class="product-calculator__legal">
+          Пример расчета условий инвестирования носит исключительно информационный характер и не является публичной офертой
+        </div>
         <div class="product-calculator__container-result product-calculator__container-result--investment">
           <div class="investment-calculator__result">
             <div class="investment-calculator__item investment-calculator__item--income">

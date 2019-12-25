@@ -1,10 +1,21 @@
 .news-card {
-  height: 480px;
   border: 1px solid var(--color-grey-light-3);
   border-radius: 12px;
+  height: 48rem;
+  width: 377px;
+
+
+  @include respond(phone) {
+    width: 230px;
+    height: 370px;
+  }
 
   &__content {
     padding: 1.5rem 2.5rem;
+
+    @include respond(phone) {
+      padding: 1rem;
+    }
   }
 
   &__date {
@@ -18,5 +29,10 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 27px;
+
+    @include respond(phone) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }
