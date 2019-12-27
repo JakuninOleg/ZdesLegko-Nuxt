@@ -18,6 +18,7 @@
                 @input="inputSum"
                 min="5000"
                 class="product-calculator__input"
+                type="text"
               >
               <label for="credit-sum" class="product-calculator__label">Желаемая сумма</label>
               <span class="product-calculator__slider">
@@ -89,7 +90,7 @@
                 Ежемесячный платеж
               </div>
               <div class="product-calculator__result-number">
-                {{ percent }} Р
+                {{ percent }} ₽
               </div>
             </div>
             <div class="product-calculator__circle-chart">
@@ -171,7 +172,7 @@ export default {
     return {
       month: 25,
       sum: 50000,
-      formattedSum: '50 000 ₽'
+      formattedSum: '50 000 рублей'
     }
   },
   computed: {
@@ -203,13 +204,13 @@ export default {
     formatSum () {
       const sumStr = this.sum.toString()
       if (this.sum < 10000) {
-        this.formattedsum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, sumStr.length) + ' ₽'
+        this.formattedsum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, sumStr.length) + ' рублей'
       } else if (this.sum < 100000) {
-        this.formattedSum = sumStr.substring(0, 2) + ' ' + sumStr.substring(2, sumStr.length) + ' ₽'
+        this.formattedSum = sumStr.substring(0, 2) + ' ' + sumStr.substring(2, sumStr.length) + ' рублей'
       } else if (this.sum < 1000000) {
-        this.formattedSum = sumStr.substring(0, 3) + ' ' + sumStr.substring(3, sumStr.length) + ' ₽'
+        this.formattedSum = sumStr.substring(0, 3) + ' ' + sumStr.substring(3, sumStr.length) + ' рублей'
       } else {
-        this.formattedSum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, 4) + ' ' + sumStr.substring(4, sumStr.length) + ' ₽'
+        this.formattedSum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, 4) + ' ' + sumStr.substring(4, sumStr.length) + ' рублей'
       }
     }
   }

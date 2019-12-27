@@ -9,10 +9,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'Placeholder description' },
+      { hid: 'title', name: 'title', content: 'Здесь Легко' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
   /*
@@ -86,6 +87,17 @@ export default {
     },
     webp: {
       quality: 95
+    },
+    responsiveLoader: 'sharp'
+  },
+  pwa: {
+    meta: {
+      name: 'ЗдесьЛегко - Займы и Инвестиции',
+      theme_color: 'hsl(48, 100%, 57%)'
+    },
+    manifest: {
+      name: 'ЗдесьЛегко - Займы и Инвестиции',
+      short_name: 'ЗдесьЛегко'
     }
   }
 }

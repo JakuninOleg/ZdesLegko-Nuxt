@@ -45,6 +45,7 @@
       <form class="questions-form__form">
         <label for="tel" class="questions-form__label">Номер телефона</label>
         <input
+          id="tel"
           @focus.prevent="focusPhone"
           @blur="blurPhone"
           @input="formatPhone"

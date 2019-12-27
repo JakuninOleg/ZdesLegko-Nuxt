@@ -7,7 +7,6 @@
     <Benefits />
     <InvestmentCalculator />
     <News />
-    <Footer />
   </div>
 </template>
 
@@ -19,7 +18,6 @@ import PersonalAccount from '~/components/PersonalAccount'
 import Benefits from '~/components/Benefits.vue'
 import InvestmentCalculator from '~/components/InvestmentCalculator.vue'
 import News from '~/components/News.vue'
-import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
@@ -29,8 +27,7 @@ export default {
     PersonalAccount,
     Benefits,
     InvestmentCalculator,
-    News,
-    Footer
+    News
   }
 }
 </script>

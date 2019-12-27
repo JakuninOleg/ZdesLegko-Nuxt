@@ -18,6 +18,7 @@
                 @input="inputSum"
                 min="5000"
                 class="product-calculator__input"
+                type="text"
               >
               <label for="credit-sum-investment" class="product-calculator__label">Желаемая сумма</label>
               <span class="product-calculator__slider">
@@ -113,31 +114,31 @@ export default {
     return {
       month: 25,
       sum: 50000,
-      formattedSum: '50 000 ₽',
+      formattedSum: '50 000 рублей',
       percent: 0.15,
       depositPercent: 0.05
     }
   },
   computed: {
     income () {
-      return '+ ' + this.formatSum(this.sum * this.percent)
+      return '+ ' + this.formatSum(this.sum * this.percent, ' ₽')
     },
     profit () {
-      return '+ ' + this.formatSum(this.sum * this.percent - (this.depositPercent * this.sum))
+      return '+ ' + this.formatSum(this.sum * this.percent - (this.depositPercent * this.sum), ' ₽')
     },
     totalIncome () {
-      return this.formatSum(this.sum * this.percent + this.sum)
+      return this.formatSum(this.sum * this.percent + this.sum, ' ₽')
     }
   },
   methods: {
     formatSliderValue () {
-      this.formattedSum = this.formatSum(this.sum)
+      this.formattedSum = this.formatSum(this.sum, ' ₽')
     },
     focusSum () {
       this.formattedSum = this.sum
     },
     blurSum () {
-      this.formattedSum = this.formatSum(this.sum)
+      this.formattedSum = this.formatSum(this.sum, ' ₽')
     },
     inputSum () {
       this.formattedSum = parseInt(this.formattedSum)
@@ -150,17 +151,17 @@ export default {
       }
       this.sum = this.formattedSum
     },
-    formatSum (sum) {
+    formatSum (sum, currency) {
       let formattedSum
       const sumStr = sum.toString()
       if (sum < 10000) {
-        formattedSum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, sumStr.length) + ' ₽'
+        formattedSum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, sumStr.length) + currency
       } else if (sum < 100000) {
-        formattedSum = sumStr.substring(0, 2) + ' ' + sumStr.substring(2, sumStr.length) + ' ₽'
+        formattedSum = sumStr.substring(0, 2) + ' ' + sumStr.substring(2, sumStr.length) + currency
       } else if (sum < 1000000) {
-        formattedSum = sumStr.substring(0, 3) + ' ' + sumStr.substring(3, sumStr.length) + ' ₽'
+        formattedSum = sumStr.substring(0, 3) + ' ' + sumStr.substring(3, sumStr.length) + currency
       } else {
-        formattedSum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, 4) + ' ' + sumStr.substring(4, sumStr.length) + ' ₽'
+        formattedSum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, 4) + ' ' + sumStr.substring(4, sumStr.length) + currency
       }
       return formattedSum
     }

@@ -6,7 +6,7 @@
   background: white;
   z-index: 98;
   transition: all 0.77s cubic-bezier(0.77, 0.2, 0.05, 1);
-  height: 100vh;
+  height: 200vh;
 
   &--active {
     right: 0;
@@ -20,7 +20,7 @@
   }
 
   &__section-content {
-    padding: 2rem;
+    padding: 1.5rem 2rem;
   }
 
   &__header {
@@ -32,7 +32,7 @@
 
   &__list {
     list-style-type: none;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
   }
 
   &__list-item {
@@ -42,14 +42,13 @@
     padding-bottom: 1rem;
   }
 
-
   &__cross {
     width: 14px;
     height: 14px;
   }
 
   &__overlay {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     width: 200vw;
     height: 100vh;
     position: fixed;

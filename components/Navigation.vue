@@ -135,7 +135,7 @@ export default {
   head () {
     return {
       bodyAttrs: {
-        class: this.menuOpened ? 'overflow-hidden' : ''
+        // class: this.menuOpened ? 'overflow-hidden' : ''
       }
     }
   }

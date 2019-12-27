@@ -3,6 +3,7 @@
   color: #ffffff;
   height: 715px;
   overflow: hidden;
+  z-index: 20;
 
   @include respond(tab-land) {
     height: 875px;

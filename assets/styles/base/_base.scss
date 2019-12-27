@@ -66,6 +66,11 @@ body {
   line-height: 1.6;
 }
 
+.container {
+  position: relative;
+  z-index: 1;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
