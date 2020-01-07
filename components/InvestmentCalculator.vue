@@ -121,24 +121,24 @@ export default {
   },
   computed: {
     income () {
-      return '+ ' + this.formatSum(this.sum * this.percent, ' ₽')
+      return '+ ' + this.formatSum(Math.ceil(this.sum * this.percent), ' ₽')
     },
     profit () {
-      return '+ ' + this.formatSum(this.sum * this.percent - (this.depositPercent * this.sum), ' ₽')
+      return '+ ' + this.formatSum(Math.ceil(this.sum * this.percent - (this.depositPercent * this.sum)), ' ₽')
     },
     totalIncome () {
-      return this.formatSum(this.sum * this.percent + this.sum, ' ₽')
+      return this.formatSum(Math.ceil(this.sum * this.percent + this.sum), ' ₽')
     }
   },
   methods: {
     formatSliderValue () {
-      this.formattedSum = this.formatSum(this.sum, ' ₽')
+      this.formattedSum = this.formatSum(this.sum, ' рублей')
     },
     focusSum () {
       this.formattedSum = this.sum
     },
     blurSum () {
-      this.formattedSum = this.formatSum(this.sum, ' ₽')
+      this.formattedSum = this.formatSum(this.sum, ' рублей')
     },
     inputSum () {
       this.formattedSum = parseInt(this.formattedSum)

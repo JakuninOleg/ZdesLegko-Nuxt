@@ -229,6 +229,12 @@
 
   &__data {
     padding-top: 3rem;
+    padding-left: 2rem;
+    min-width: 46%;
+
+    @include respond(tab-land) {
+      padding-left: 0;
+    }
 
     @include respond(phone) {
       display: grid;

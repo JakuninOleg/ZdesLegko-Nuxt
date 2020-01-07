@@ -6,7 +6,7 @@
   z-index: 20;
 
   @include respond(tab-land) {
-    height: 875px;
+    height: 720px;
   }
 
   @include respond(phone) {
@@ -54,7 +54,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    height: 450px;
+    height: 400px;
     align-items: flex-end;
     transform: translateY(40px);
 
@@ -133,7 +133,7 @@
     }
 
     &--small {
-      width: 450px;
+      width: 375px;
 
       @include respond(phone) {
         width: 250px;
@@ -144,7 +144,7 @@
       }
 
       &--1 {
-        transform: translateY(-50px);
+        transform: translateY(-70px);
         // width: 550px;
       }
 
