@@ -5,7 +5,7 @@
   "author": "olegjakunin",
   "private": true,
   "engines": {
-    "node": "^12.0.0"
+    "node": "^13.0.0"
   },
   "scripts": {
     "dev": "nuxt",
