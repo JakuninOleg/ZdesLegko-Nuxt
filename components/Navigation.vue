@@ -54,9 +54,9 @@
       </div>
       <div class="navigation__icons">
         <button class="btn">
-          <Login class="navigation__icons-icon" />
+          <Login class="navigation__icons-icon" aria-label="Вход в личный кабинет"/>
         </button>
-        <button @click="toggleMenu" class="btn">
+        <button @click="toggleMenu" class="btn" aria-label="Меню">
           <Menu class="navigation__icons-icon" />
         </button>
       </div>

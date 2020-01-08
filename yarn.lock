@@ -8406,13 +8406,6 @@ responselike@1.0.2:
   dependencies:
     lowercase-keys "^1.0.0"
 
-responsive-loader@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/responsive-loader/-/responsive-loader-1.2.0.tgz#89b98a11d0cb27fe6c17b0831350e1455c14ba31"
-  integrity sha512-ZbeiKySyCMkMLm747DlwvpRS6mk7MiJZiXmOY6KxE5P7d08av3jy2fbEpDDnuxWDruVUePoMzMg9hYGtBWFNxg==
-  dependencies:
-    loader-utils "^1.1.0"
-
 restore-cursor@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/restore-cursor/-/restore-cursor-3.1.0.tgz#39f67c54b3a7a58cea5236d95cf0034239631f7e"
@@ -10065,11 +10058,6 @@ vue@^2.6.10:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
-
-vueperslides@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/vueperslides/-/vueperslides-2.2.0.tgz#0f196e4868aadfb76824f97049c92b4c464a992f"
-  integrity sha512-7iQcNrjgzQ2lpX6B2pkrHahzxvrPt1/Cjax1y0dhWx3IkHzIyZXDQEVEUNc4W/TOzZ/S54rmS3zQ9sDLKYTZaQ==
 
 vuex@^3.1.1:
   version "3.1.2"

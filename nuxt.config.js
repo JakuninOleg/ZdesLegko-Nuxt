@@ -92,12 +92,13 @@ export default {
   },
   pwa: {
     meta: {
-      name: 'ЗдесьЛегко - Займы и Инвестиции',
-      theme_color: 'hsl(48, 100%, 57%)'
+      name: 'Здесь Легко - Займы и Инвестиции',
     },
     manifest: {
-      name: 'ЗдесьЛегко - Займы и Инвестиции',
-      short_name: 'ЗдесьЛегко'
+      name: 'Здесь Легко - Займы и Инвестиции',
+      short_name: 'ЗдесьЛегко',
+      theme_color: '#FFD324',
+      background_color: '#FFD324'
     }
   }
 }

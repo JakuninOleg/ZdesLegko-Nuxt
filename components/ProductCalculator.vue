@@ -170,9 +170,10 @@ export default {
   },
   data () {
     return {
-      month: 25,
+      month: 12,
       sum: 50000,
-      formattedSum: '50 000 рублей'
+      formattedSum: '50 000 рублей',
+      formattedDays: '1 год'
     }
   },
   computed: {
@@ -211,6 +212,41 @@ export default {
         this.formattedSum = sumStr.substring(0, 3) + ' ' + sumStr.substring(3, sumStr.length) + ' рублей'
       } else {
         this.formattedSum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, 4) + ' ' + sumStr.substring(4, sumStr.length) + ' рублей'
+      }
+    },
+    formatDays () {
+      let monthArr = [2,3,4]
+      const years = Math.trunc(days / 12)
+      const month = days % 12
+
+      if(years == 0) {
+        if(month == 1) {
+          this.formattedDays = "1 месяц"
+        } else if(monthArr.includes(month)) {
+          this.formattedDays = month + " месяца"
+        } else {
+          this.formattedDays = month + " месяцев"
+        }
+      } else if(years==1) {
+        if(month == 0) {
+          this.formattedDays = "1 год"
+        } else if(month == 1) {
+          this.formattedDays = "1 год 1 месяц"
+        } else if(monthArr.includes(month)) {
+          this.formattedDays = "1 год " + month + " месяца"
+        } else {
+          this.formattedDays = "1 год " + month + " месяцев"
+        }
+      } else {
+        if(month == 0) {
+          this.formattedDays = years + " года"
+        } else if(month == 1) {
+          this.formattedDays = years + " года 1 месяц"
+        } else if(monthArr.includes(month)) {
+          this.formattedDays = years + " года " + month + " месяца"
+        } else {
+          this.formattedDays = years + " года " + month + " месяцев"
+        }
       }
     }
   }
