@@ -25,6 +25,7 @@
     "now-builder": "^1.0.7",
     "nuxt": "^2.0.0",
     "nuxt-svg-loader": "^1.0.1",
+    "responsive-loader": "^1.2.0",
     "sharp": "^0.23.4",
     "sqip-loader": "^1.0.0",
     "vue-awesome-swiper": "^3.1.3",
