@@ -32,7 +32,8 @@ export default {
   */
   plugins: [
     { src: '~/plugins/swiper.js', ssr: false },
-    '~/plugins/vue-lazysizes.client.js'
+    '~/plugins/vue-lazysizes.client.js',
+    '~/plugins/mixins.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -92,7 +93,7 @@ export default {
   },
   pwa: {
     meta: {
-      name: 'Здесь Легко - Займы и Инвестиции',
+      name: 'Здесь Легко - Займы и Инвестиции'
     },
     manifest: {
       name: 'Здесь Легко - Займы и Инвестиции',

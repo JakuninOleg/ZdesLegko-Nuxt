@@ -54,6 +54,7 @@
           class="questions-form__input"
           placeholder="+7 ("
           required="true"
+          autocomplete="off"
         >
         <label for="checkbox" class="questions-form__label questions-form__label--checkbox">
           <input

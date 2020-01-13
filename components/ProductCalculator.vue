@@ -16,7 +16,6 @@
                 @focus="focusSum"
                 @blur="blurSum"
                 @input="inputSum"
-                min="5000"
                 class="product-calculator__input"
                 type="text"
               >
@@ -28,7 +27,8 @@
                   :min="50000"
                   :max="1000000"
                   :interval="50000"
-                  @change="formatSliderValue"
+                  @change="formatSliderSum"
+                  :silent="true"
                   tooltip="none"
                 >
                   <template v-slot:dot>
@@ -40,21 +40,30 @@
               </span>
             </div>
             <div class="product-calculator__input-tooltips">
-              <span class="product-calculator__input-tooltip">5 000 <span class="product-calculator__input-tooltip-rub">рублей</span></span>
+              <span class="product-calculator__input-tooltip">50 000 <span class="product-calculator__input-tooltip-rub">рублей</span></span>
               <span class="product-calculator__input-tooltip">1 000 000 <span class="product-calculator__input-tooltip-rub">рублей</span></span>
             </div>
           </div>
 
           <div class="product-calculator__input-wrapper">
             <div class="product-calculator__input-container">
-              <input id="credit-month" v-model.number="month" class="product-calculator__input">
+              <input
+                id="credit-month"
+                v-model="formattedDays"
+                @focus="focusDays"
+                @blur="blurDays"
+                @input="inputDays"
+                class="product-calculator__input"
+              >
               <label for="credit-month" class="product-calculator__label">Срок займа</label>
               <span class="product-calculator__slider">
                 <VueSlider
-                  v-model="month"
+                  v-model="days"
                   :min="1"
                   :dotSize="21"
                   :max="36"
+                  @change="formatSliderDays"
+                  :silent="true"
                   tooltip="none"
                   class="vue-slider-kek"
                 >
@@ -170,84 +179,67 @@ export default {
   },
   data () {
     return {
-      month: 12,
       sum: 50000,
       formattedSum: '50 000 рублей',
-      formattedDays: '1 год'
+      formattedDays: '1 год',
+      days: 12
     }
   },
   computed: {
     percent () {
-      return this.sum * 0.0001
+      return Math.ceil(this.sum * 0.0001)
     }
   },
   methods: {
-    formatSliderValue () {
-      this.formatSum()
+    formatSliderSum () {
+      this.formattedSum = this.formatSum()
+    },
+    formatSliderDays () {
+      this.formatDays()
     },
     focusSum () {
       this.formattedSum = this.sum
     },
     blurSum () {
-      this.formatSum()
+      if (this.formattedSum < 50000) {
+        this.formattedSum = 50000
+        this.sum = this.formattedSum
+      }
+      this.formattedSum = this.formatSum()
     },
     inputSum () {
       this.formattedSum = parseInt(this.formattedSum)
       if (this.formattedSum > 1000000) {
         this.formattedSum = 1000000
-      } else if (this.formattedSum < 50000) {
+      } else if (this.formattedSum < 0) {
         this.formattedSum = 50000
       } else if (isNaN(this.formattedSum)) {
         this.formattedSum = 50000
       }
       this.sum = this.formattedSum
     },
-    formatSum () {
-      const sumStr = this.sum.toString()
-      if (this.sum < 10000) {
-        this.formattedsum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, sumStr.length) + ' рублей'
-      } else if (this.sum < 100000) {
-        this.formattedSum = sumStr.substring(0, 2) + ' ' + sumStr.substring(2, sumStr.length) + ' рублей'
-      } else if (this.sum < 1000000) {
-        this.formattedSum = sumStr.substring(0, 3) + ' ' + sumStr.substring(3, sumStr.length) + ' рублей'
-      } else {
-        this.formattedSum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, 4) + ' ' + sumStr.substring(4, sumStr.length) + ' рублей'
+    focusDays () {
+      this.formattedDays = this.days
+    },
+    blurDays () {
+      this.formattedDays = this.formatDays()
+    },
+    inputDays () {
+      this.formattedDays = parseInt(this.formattedDays)
+      if (this.formattedDays > 36) {
+        this.formattedDays = 36
+      } else if (this.formattedDays < 1) {
+        this.formattedDays = 1
+      } else if (isNaN(this.formattedDays)) {
+        this.formattedDays = 12
       }
+      this.days = this.formattedDays
+    },
+    formatSum () {
+      return this.formatSumMixin(this.sum, ' рублей')
     },
     formatDays () {
-      let monthArr = [2,3,4]
-      const years = Math.trunc(days / 12)
-      const month = days % 12
-
-      if(years == 0) {
-        if(month == 1) {
-          this.formattedDays = "1 месяц"
-        } else if(monthArr.includes(month)) {
-          this.formattedDays = month + " месяца"
-        } else {
-          this.formattedDays = month + " месяцев"
-        }
-      } else if(years==1) {
-        if(month == 0) {
-          this.formattedDays = "1 год"
-        } else if(month == 1) {
-          this.formattedDays = "1 год 1 месяц"
-        } else if(monthArr.includes(month)) {
-          this.formattedDays = "1 год " + month + " месяца"
-        } else {
-          this.formattedDays = "1 год " + month + " месяцев"
-        }
-      } else {
-        if(month == 0) {
-          this.formattedDays = years + " года"
-        } else if(month == 1) {
-          this.formattedDays = years + " года 1 месяц"
-        } else if(monthArr.includes(month)) {
-          this.formattedDays = years + " года " + month + " месяца"
-        } else {
-          this.formattedDays = years + " года " + month + " месяцев"
-        }
-      }
+      return this.formatDaysMixin(this.days)
     }
   }
 }
