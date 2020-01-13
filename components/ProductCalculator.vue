@@ -195,7 +195,7 @@ export default {
       this.formattedSum = this.formatSum()
     },
     formatSliderDays () {
-      this.formatDays()
+      this.formattedDays = this.formatDays()
     },
     focusSum () {
       this.formattedSum = this.sum
