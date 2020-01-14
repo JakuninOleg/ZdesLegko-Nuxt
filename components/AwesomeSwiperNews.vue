@@ -28,6 +28,9 @@
             <p class="news-card__title">
               {{ slide.name }}
             </p>
+            <button class="btn btn--blue">
+              Подробнее
+            </button>
           </div>
         </div>
       </div>

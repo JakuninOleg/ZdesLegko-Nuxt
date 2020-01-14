@@ -1,20 +1,25 @@
 .news-card {
   border: 1px solid var(--color-grey-light-3);
   border-radius: 12px;
-  height: 48rem;
+  height: 54rem;
   width: 377px;
 
 
   @include respond(phone) {
     width: 230px;
-    height: 370px;
+    height: 390px;
   }
 
   &__content {
     padding: 1.5rem 2.5rem;
+    display: flex;
+    height: 35%;
+    flex-direction: column;
+    justify-content: space-between;
 
     @include respond(phone) {
       padding: 1rem;
+      height: 46%;
     }
   }
 
@@ -25,7 +30,6 @@
   }
 
   &__title {
-    padding-top: 1rem;
     font-weight: 500;
     font-size: 20px;
     line-height: 27px;
