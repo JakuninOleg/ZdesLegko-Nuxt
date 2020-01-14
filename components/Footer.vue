@@ -8,7 +8,7 @@
             <Logo />
           </li>
           <li class="footer__list-item footer__list-item--contacts">
-            <a href="tel:+74951203120" class="link footer__list-tel">+7 495 120 31 20</a>
+            <a href="tel:+74951203120" class="link footer__list-tel link--footer-primary">+7 495 120 31 20</a>
             <span class="footer__list-hours">с 10:00 до 19:00 по мск</span>
           </li>
           <li class="footer__list-item">
@@ -20,98 +20,98 @@
         </ul>
         <ul class="footer__list footer__list--company">
           <li class="footer__list-item footer__list-item--heading">
-            <nuxt-link to="/about" class="link">
+            <nuxt-link to="/about" class="link link--footer-primary">
               О компании
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Миссия
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               FAQ
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Контакты
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Партнерам
             </nuxt-link>
           </li>
         </ul>
         <ul class="footer__list footer__list--loans">
           <li class="footer__list-item footer__list-item--heading">
-            <nuxt-link to="/about" class="link">
+            <nuxt-link to="/about" class="link link--footer-primary">
               Займы
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Лизинг авто
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Займ под ПТС
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Беззалоговые займы
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Автоломбард
             </nuxt-link>
           </li>
         </ul>
         <ul class="footer__list footer__list--investment">
           <li class="footer__list-item footer__list-item--heading">
-            <nuxt-link to="/about" class="link">
+            <nuxt-link to="/about" class="link link--footer-primary">
               Инвестиции
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Вклады
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Сбережения
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Облигации
             </nuxt-link>
           </li>
         </ul>
         <ul class="footer__list footer__list--services">
           <li class="footer__list-item footer__list-item--heading">
-            <nuxt-link to="/about" class="link">
+            <nuxt-link to="/about" class="link link--footer-primary">
               Услуги
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Выездной офис
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Франшиза
             </nuxt-link>
           </li>
           <li class="footer__list-item footer__list-item--simple">
-            <nuxt-link to="/" class="link">
+            <nuxt-link to="/" class="link link--footer-secondary">
               Личный кабинет
             </nuxt-link>
           </li>

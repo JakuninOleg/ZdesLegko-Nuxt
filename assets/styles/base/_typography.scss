@@ -13,6 +13,10 @@
 
   &--secondary {
     color: #ffffff;
+
+    &:hover {
+      color: var(--color-yellow);
+    }
   }
 
   &--swiper {
@@ -30,6 +34,22 @@
 
   &--checkbox {
     color: inherit;
+  }
+
+  &--footer {
+    &-primary {
+      &:hover {
+        color: var(--color-yellow);
+      }
+    }
+
+    &-secondary {
+      opacity: 0.7;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }
 
