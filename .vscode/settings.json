@@ -1,0 +1,11 @@
+{
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatter.ts": "prettier-tslint",
+  "eslint.packageManager": "yarn",
+  "vetur.format.defaultFormatter.html": "none",
+  "javascript.implicitProjectConfig.checkJs": true,
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "prettier.semi": false
+}

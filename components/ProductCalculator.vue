@@ -23,12 +23,12 @@
               <span class="product-calculator__slider">
                 <VueSlider
                   v-model="sum"
-                  :dotSize="21"
+                  :dot-size="21"
                   :min="50000"
                   :max="1000000"
                   :interval="50000"
-                  @change="formatSliderSum"
                   :silent="true"
+                  @change="formatSliderSum"
                   tooltip="none"
                 >
                   <template v-slot:dot>
@@ -40,8 +40,10 @@
               </span>
             </div>
             <div class="product-calculator__input-tooltips">
-              <span class="product-calculator__input-tooltip">50 000 <span class="product-calculator__input-tooltip-rub">рублей</span></span>
-              <span class="product-calculator__input-tooltip">1 000 000 <span class="product-calculator__input-tooltip-rub">рублей</span></span>
+              <span class="product-calculator__input-tooltip">50 000
+                <span class="product-calculator__input-tooltip-rub">рублей</span></span>
+              <span class="product-calculator__input-tooltip">1 000 000
+                <span class="product-calculator__input-tooltip-rub">рублей</span></span>
             </div>
           </div>
 
@@ -60,10 +62,10 @@
                 <VueSlider
                   v-model="days"
                   :min="1"
-                  :dotSize="21"
+                  :dot-size="21"
                   :max="36"
-                  @change="formatSliderDays"
                   :silent="true"
+                  @change="formatSliderDays"
                   tooltip="none"
                   class="vue-slider-kek"
                 >
@@ -83,7 +85,8 @@
         </div>
 
         <div class="product-calculator__legal">
-          Пример расчета условий по займу носит исключительно информационный характер и не является публичной офертой
+          Пример расчета условий по займу носит исключительно информационный
+          характер и не является публичной офертой
         </div>
 
         <div class="product-calculator__container-result">
@@ -103,8 +106,18 @@
               </div>
             </div>
             <div class="product-calculator__circle-chart">
-              <svg width="275" height="275" viewBox="0 0 33.83098862 33.83098862" class="circle-chart">
-                <circle cx="16.91549431" cy="16.91549431" r="15.91549430918954" fill="#fff" />
+              <svg
+                width="275"
+                height="275"
+                viewBox="0 0 33.83098862 33.83098862"
+                class="circle-chart"
+              >
+                <circle
+                  cx="16.91549431"
+                  cy="16.91549431"
+                  r="15.91549430918954"
+                  fill="#fff"
+                />
                 <circle
                   cx="16.91549431"
                   cy="16.91549431"
@@ -142,7 +155,9 @@
           </div>
           <div class="product-calculator__legend">
             <div class="product-calculator__legend-item">
-              <span class="product-calculator__legend-circle product-calculator__legend-circle--sum" />
+              <span
+                class="product-calculator__legend-circle product-calculator__legend-circle--sum"
+              />
               <span class="product-calculator__legend-title">
                 Основная сумма
               </span>
@@ -151,7 +166,9 @@
               </span>
             </div>
             <div class="product-calculator__legend-item">
-              <span class="product-calculator__legend-circle product-calculator__legend-circle--percent" />
+              <span
+                class="product-calculator__legend-circle product-calculator__legend-circle--percent"
+              />
               <span class="product-calculator__legend-title">
                 Проценты
               </span>

@@ -6,7 +6,9 @@
       </h2>
 
       <div class="product-calculator__container">
-        <div class="product-calculator__container-input product-calculator__container-input--investment">
+        <div
+          class="product-calculator__container-input product-calculator__container-input--investment"
+        >
           <div class="product-calculator__input-wrapper">
             <div class="product-calculator__input-container">
               <input
@@ -19,16 +21,19 @@
                 class="product-calculator__input"
                 type="text"
               >
-              <label for="credit-sum-investment" class="product-calculator__label">Желаемая сумма</label>
+              <label
+                for="credit-sum-investment"
+                class="product-calculator__label"
+              >Желаемая сумма</label>
               <span class="product-calculator__slider">
                 <VueSlider
                   v-model="sum"
-                  :dotSize="21"
+                  :dot-size="21"
                   :min="50000"
                   :max="1000000"
                   :interval="50000"
-                  @change="formatSliderSum"
                   :silent="true"
+                  @change="formatSliderSum"
                   tooltip="none"
                 >
                   <template v-slot:dot>
@@ -40,8 +45,12 @@
               </span>
             </div>
             <div class="product-calculator__input-tooltips">
-              <span class="product-calculator__input-tooltip">50 000 рублей</span>
-              <span class="product-calculator__input-tooltip">1 000 000 рублей</span>
+              <span
+                class="product-calculator__input-tooltip"
+              >50 000 рублей</span>
+              <span
+                class="product-calculator__input-tooltip"
+              >1 000 000 рублей</span>
             </div>
           </div>
 
@@ -55,15 +64,18 @@
                 @input="inputDays"
                 class="product-calculator__input"
               >
-              <label for="investment-month" class="product-calculator__label">Срок займа</label>
+              <label
+                for="investment-month"
+                class="product-calculator__label"
+              >Срок займа</label>
               <span class="product-calculator__slider">
                 <VueSlider
                   v-model="days"
                   :min="1"
-                  :dotSize="21"
+                  :dot-size="21"
                   :max="36"
-                  @change="formatSliderDays"
                   :silent="true"
+                  @change="formatSliderDays"
                   tooltip="none"
                 >
                   <template v-slot:dot>
@@ -81,22 +93,45 @@
           </div>
         </div>
         <div class="product-calculator__legal">
-          Пример расчета условий инвестирования носит исключительно информационный характер и не является публичной офертой
+          Пример расчета условий инвестирования носит исключительно
+          информационный характер и не является публичной офертой
         </div>
-        <div class="product-calculator__container-result product-calculator__container-result--investment">
+        <div
+          class="product-calculator__container-result product-calculator__container-result--investment"
+        >
           <div class="investment-calculator__result">
-            <div class="investment-calculator__item investment-calculator__item--income">
-              <span class="investment-calculator__item-header">{{ income }}</span>
-              <span class="investment-calculator__item-text">ваш доход в конце срока</span>
+            <div
+              class="investment-calculator__item investment-calculator__item--income"
+            >
+              <span class="investment-calculator__item-header">{{
+                income
+              }}</span>
+              <span
+                class="investment-calculator__item-text"
+              >ваш доход в конце срока</span>
             </div>
-            <div class="investment-calculator__item investment-calculator__item--income-total">
-              <span class="investment-calculator__item-header">{{ totalIncome }}</span>
-              <span class="investment-calculator__item-text">сумма вклада с процентами</span>
+            <div
+              class="investment-calculator__item investment-calculator__item--income-total"
+            >
+              <span class="investment-calculator__item-header">{{
+                totalIncome
+              }}</span>
+              <span
+                class="investment-calculator__item-text"
+              >сумма вклада с процентами</span>
             </div>
-            <div class="investment-calculator__item investment-calculator__item--profit">
-              <span class="investment-calculator__item-header">{{ profit }}</span>
-              <span class="investment-calculator__item-text investment-calculator__item-text--profit">выгода по сравнению с банковским депозитом</span>
-              <button class="btn btn--yellow btn--investment investment-calculator__item-button">
+            <div
+              class="investment-calculator__item investment-calculator__item--profit"
+            >
+              <span class="investment-calculator__item-header">{{
+                profit
+              }}</span>
+              <span
+                class="investment-calculator__item-text investment-calculator__item-text--profit"
+              >выгода по сравнению с банковским депозитом</span>
+              <button
+                class="btn btn--yellow btn--investment investment-calculator__item-button"
+              >
                 Подробнее
               </button>
             </div>
@@ -133,10 +168,19 @@ export default {
       return '+ ' + this.formatSum(Math.ceil(this.sum * this.percent), ' ₽')
     },
     profit () {
-      return '+ ' + this.formatSum(Math.ceil(this.sum * this.percent - (this.depositPercent * this.sum)), ' ₽')
+      return (
+        '+ ' +
+        this.formatSum(
+          Math.ceil(this.sum * this.percent - this.depositPercent * this.sum),
+          ' ₽'
+        )
+      )
     },
     totalIncome () {
-      return this.formatSum(Math.ceil(this.sum * this.percent + this.sum), ' ₽')
+      return this.formatSum(
+        Math.ceil(this.sum * this.percent + this.sum),
+        ' ₽'
+      )
     }
   },
   methods: {

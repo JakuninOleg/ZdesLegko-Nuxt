@@ -7,13 +7,31 @@ Vue.mixin({
       let formattedSum
 
       if (sum < 10000) {
-        formattedSum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, sumStr.length) + currencyStr
+        formattedSum =
+          sumStr.substring(0, 1) +
+          ' ' +
+          sumStr.substring(1, sumStr.length) +
+          currencyStr
       } else if (sum < 100000) {
-        formattedSum = sumStr.substring(0, 2) + ' ' + sumStr.substring(2, sumStr.length) + currencyStr
+        formattedSum =
+          sumStr.substring(0, 2) +
+          ' ' +
+          sumStr.substring(2, sumStr.length) +
+          currencyStr
       } else if (sum < 1000000) {
-        formattedSum = sumStr.substring(0, 3) + ' ' + sumStr.substring(3, sumStr.length) + currencyStr
+        formattedSum =
+          sumStr.substring(0, 3) +
+          ' ' +
+          sumStr.substring(3, sumStr.length) +
+          currencyStr
       } else {
-        formattedSum = sumStr.substring(0, 1) + ' ' + sumStr.substring(1, 4) + ' ' + sumStr.substring(4, sumStr.length) + currencyStr
+        formattedSum =
+          sumStr.substring(0, 1) +
+          ' ' +
+          sumStr.substring(1, 4) +
+          ' ' +
+          sumStr.substring(4, sumStr.length) +
+          currencyStr
       }
 
       return formattedSum

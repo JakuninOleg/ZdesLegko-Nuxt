@@ -1,7 +1,11 @@
 <template>
   <div v-swiper:mySwiper="swiperOption">
     <div class="swiper-wrapper">
-      <div v-for="(slide, index) in slides" :key="index" class="swiper-slide swiper-slide--product">
+      <div
+        v-for="(slide, index) in slides"
+        :key="index"
+        class="swiper-slide swiper-slide--product"
+      >
         <div class="product-card">
           <template>
             <figure>
@@ -11,7 +15,9 @@
                   type="image/webp"
                 >
                 <source
-                  :srcSet="require('~/assets/images/' + slide.image + '?resize')"
+                  :srcSet="
+                    require('~/assets/images/' + slide.image + '?resize')
+                  "
                   type="image/png"
                 >
                 <img

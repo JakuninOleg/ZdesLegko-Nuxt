@@ -6,20 +6,42 @@
           Лучшие продукты
         </h2>
         <div class="products__controls">
-          <button :class="choice == 'Все' ? 'products__controls-item--active' : ''" @click="showAllProducts" class="btn products__controls-item">
+          <button
+            :class="choice == 'Все' ? 'products__controls-item--active' : ''"
+            @click="showAllProducts"
+            class="btn products__controls-item"
+          >
             Всем
           </button>
-          <button :class="choice == 'Частные' ? 'products__controls-item--active' : ''" @click="showPrivateProducts" class="btn products__controls-item">
+          <button
+            :class="
+              choice == 'Частные' ? 'products__controls-item--active' : ''
+            "
+            @click="showPrivateProducts"
+            class="btn products__controls-item"
+          >
             Частным
           </button>
-          <button :class="choice == 'Бизнес' ? 'products__controls-item--active' : ''" @click="showBusinessProducts" class="btn products__controls-item">
+          <button
+            :class="choice == 'Бизнес' ? 'products__controls-item--active' : ''"
+            @click="showBusinessProducts"
+            class="btn products__controls-item"
+          >
             Бизнесу
           </button>
           <div class="arrows products__controls-item">
-            <button @click="prevSlide" class="btn arrows__button" aria-label="Prev Slide">
+            <button
+              @click="prevSlide"
+              class="btn arrows__button"
+              aria-label="Prev Slide"
+            >
               <span class="arrows__arrow arrows__button--left" />
             </button>
-            <button @click="nextSlide" class="btn arrows__button" aria-label="Next Slide">
+            <button
+              @click="nextSlide"
+              class="btn arrows__button"
+              aria-label="Next Slide"
+            >
               <span class="arrows__arrow arrows__button--right" />
             </button>
           </div>
@@ -43,21 +65,33 @@ export default {
         {
           image: 'pc-1.png',
           name: 'Деньги под авто',
-          benefits: ['до 50 000 рублей или 90% стоимости', 'досрочное погашение', 'одобрение за 15 минут'],
+          benefits: [
+            'до 50 000 рублей или 90% стоимости',
+            'досрочное погашение',
+            'одобрение за 15 минут'
+          ],
           private: true,
           business: true
         },
         {
           image: 'pc-2.png',
           name: 'Займы для бизнеса',
-          benefits: ['уникальные условия и выезд менеджера', 'до 15 000 000 рублей', 'до 36 месяцев'],
+          benefits: [
+            'уникальные условия и выезд менеджера',
+            'до 15 000 000 рублей',
+            'до 36 месяцев'
+          ],
           private: false,
           business: true
         },
         {
           image: 'pc-3.png',
           name: 'Кредитные каникулы',
-          benefits: ['рефинансирование со скидкой', 'от 200 000  до 5 млн. рублей', 'до 36 месяцев'],
+          benefits: [
+            'рефинансирование со скидкой',
+            'от 200 000  до 5 млн. рублей',
+            'до 36 месяцев'
+          ],
           private: true,
           business: true
         },

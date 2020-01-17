@@ -1,7 +1,13 @@
 <template>
   <nav class="navigation">
-    <div :class="menuOpened ? 'burger-menu__overlay--active' : ''" class="burger-menu__overlay" />
-    <BurgerMenu :class="menuOpened ? 'burger-menu--active' : ''" @toggleMenu="toggleMenu" />
+    <div
+      :class="menuOpened ? 'burger-menu__overlay--active' : ''"
+      class="burger-menu__overlay"
+    />
+    <BurgerMenu
+      :class="menuOpened ? 'burger-menu--active' : ''"
+      @toggleMenu="toggleMenu"
+    />
     <div class="navigation__content">
       <div class="navigation__left">
         <nuxt-link aria-label="Главная страница" to="/">
@@ -36,12 +42,20 @@
             </nuxt-link>
           </li>
           <li class="navigation__list-item navigation__list-item--main">
-            <nuxt-link aria-label="Наши офисы" to="/contacts" class="link link--main">
+            <nuxt-link
+              aria-label="Наши офисы"
+              to="/contacts"
+              class="link link--main"
+            >
               Офисы
             </nuxt-link>
           </li>
           <li class="navigation__list-item navigation__list-item--main">
-            <nuxt-link aria-label="Блог компании" to="/blog" class="link link--main">
+            <nuxt-link
+              aria-label="Блог компании"
+              to="/blog"
+              class="link link--main"
+            >
               Журнал
             </nuxt-link>
           </li>
@@ -54,7 +68,10 @@
       </div>
       <div class="navigation__icons">
         <button class="btn">
-          <Login class="navigation__icons-icon" aria-label="Вход в личный кабинет" />
+          <Login
+            class="navigation__icons-icon"
+            aria-label="Вход в личный кабинет"
+          />
         </button>
         <button @click="toggleMenu" class="btn" aria-label="Меню">
           <Menu class="navigation__icons-icon" />
@@ -82,7 +99,11 @@
           </nuxt-link>
         </li>
         <li class="navigation__list-item navigation__list-item--secondary">
-          <nuxt-link aria-label="Автоломбард" to="/about" class="link link--secondary">
+          <nuxt-link
+            aria-label="Автоломбард"
+            to="/about"
+            class="link link--secondary"
+          >
             Автоломбард
           </nuxt-link>
         </li>

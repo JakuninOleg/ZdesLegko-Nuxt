@@ -11,10 +11,18 @@
           </nuxt-link>
         </div>
         <div class="arrows products__controls-item">
-          <button @click="prevSlide" class="btn arrows__button" aria-label="Prev Slide">
+          <button
+            @click="prevSlide"
+            class="btn arrows__button"
+            aria-label="Prev Slide"
+          >
             <span class="arrows__arrow arrows__button--left" />
           </button>
-          <button @click="nextSlide" class="btn arrows__button" aria-label="Next Slide">
+          <button
+            @click="nextSlide"
+            class="btn arrows__button"
+            aria-label="Next Slide"
+          >
             <span class="arrows__arrow arrows__button--right" />
           </button>
         </div>
@@ -36,12 +44,14 @@ export default {
       allSlides: [
         {
           image: 'news-1.png',
-          name: 'Беру деньги под ПТС на новогодние каникулы по минимальной ставке от 1,5%',
+          name:
+            'Беру деньги под ПТС на новогодние каникулы по минимальной ставке от 1,5%',
           date: '18.12.2014'
         },
         {
           image: 'news-2.png',
-          name: 'Инструкция: что делать при банкротстве кредитного потребительского кооператива?',
+          name:
+            'Инструкция: что делать при банкротстве кредитного потребительского кооператива?',
           date: '30.10.2017'
         },
         {
@@ -51,7 +61,8 @@ export default {
         },
         {
           image: 'news-4.png',
-          name: 'Готовимся к отпуску: правила финансовой безопасности за рубежом',
+          name:
+            'Готовимся к отпуску: правила финансовой безопасности за рубежом',
           date: '21.02.2019'
         }
       ],

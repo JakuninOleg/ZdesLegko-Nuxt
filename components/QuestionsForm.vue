@@ -2,8 +2,14 @@
   <div class="questions-form">
     <figure class="questions-form__image--big">
       <picture>
-        <source :srcSet="require('~/assets/images/form-questions.png?webp')" type="image/webp">
-        <source :srcSet="require('~/assets/images/form-questions.png?resize')" type="image/png">
+        <source
+          :srcSet="require('~/assets/images/form-questions.png?webp')"
+          type="image/webp"
+        >
+        <source
+          :srcSet="require('~/assets/images/form-questions.png?resize')"
+          type="image/png"
+        >
         <img
           :src="require('~/assets/images/form-questions.png?sqip')"
           loading="lazy"
@@ -15,8 +21,14 @@
 
     <figure class="questions-form__image--small">
       <picture>
-        <source :srcSet="require('~/assets/images/form-questions-sm.png?webp')" type="image/webp">
-        <source :srcSet="require('~/assets/images/form-questions-sm.png?resize')" type="image/png">
+        <source
+          :srcSet="require('~/assets/images/form-questions-sm.png?webp')"
+          type="image/webp"
+        >
+        <source
+          :srcSet="require('~/assets/images/form-questions-sm.png?resize')"
+          type="image/png"
+        >
         <img
           :src="require('~/assets/images/form-questions-sm.png?sqip')"
           loading="lazy"
@@ -28,8 +40,14 @@
 
     <figure>
       <picture>
-        <source :srcSet="require('~/assets/images/form-woman.png?webp')" type="image/webp">
-        <source :srcSet="require('~/assets/images/form-woman.png?resize')" type="image/png">
+        <source
+          :srcSet="require('~/assets/images/form-woman.png?webp')"
+          type="image/webp"
+        >
+        <source
+          :srcSet="require('~/assets/images/form-woman.png?resize')"
+          type="image/png"
+        >
         <img
           :src="require('~/assets/images/form-woman.png?sqip')"
           loading="lazy"
@@ -46,17 +64,20 @@
         <label for="tel" class="questions-form__label">Номер телефона</label>
         <input
           id="tel"
+          v-model="phone"
           @focus.prevent="focusPhone"
           @blur="blurPhone"
           @input="formatPhone"
-          v-model="phone"
           type="tel"
           class="questions-form__input"
           placeholder="+7 ("
           required="true"
           autocomplete="off"
         >
-        <label for="checkbox" class="questions-form__label questions-form__label--checkbox">
+        <label
+          for="checkbox"
+          class="questions-form__label questions-form__label--checkbox"
+        >
           <input
             id="checkbox"
             v-model="checked"
@@ -66,7 +87,10 @@
           >
           <nuxt-link to="/" class="link link--checkbox">Я принимаю условия передачи информации</nuxt-link>
         </label>
-        <button type="submit" class="btn btn--yellow btn--form questions-form__button">
+        <button
+          type="submit"
+          class="btn btn--yellow btn--form questions-form__button"
+        >
           Позвоните мне
         </button>
       </form>
