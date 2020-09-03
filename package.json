@@ -18,7 +18,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
-    "lazysizes": "^5.2.0",
+    "lazysizes": "^5.2.1",
     "now-builder": "^1.0.7",
     "nuxt": "^2.0.0",
     "nuxt-svg-loader": "^1.0.1",
